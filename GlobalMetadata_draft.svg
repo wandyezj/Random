@@ -1,0 +1,22 @@
+<svg width="256" height="256" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="258" width="258" y="-1" x="-1"/>
+  <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
+   <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
+  </g>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <ellipse ry="44" rx="44" id="svg_1" cy="199.100009" cx="57.700025" stroke-width="17" stroke="#000" fill="none"/>
+  <line stroke="#000" stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_2" y2="159.500009" x2="81.900025" y1="86.700011" x1="114.100025" stroke-width="17" fill="none"/>
+  <line stroke="#000" stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_4" y2="136.300007" x2="161.300018" y1="168.10001" x1="90.300023" stroke-width="17" fill="none"/>
+  <line stroke="#000" stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_7" y2="16.9" x2="172.700025" y1="89.300014" x1="112.500026" fill-opacity="null" stroke-opacity="null" stroke-width="17" fill="none"/>
+  <line stroke="#000" transform="rotate(1.579024076461792 196.9000244140621,99.59999084472652) " stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_8" y2="59.730061" x2="234.631539" y1="139.469932" x1="159.16852" fill-opacity="null" stroke-opacity="null" stroke-width="17" fill="none"/>
+  <line stroke="#000" transform="rotate(1.3171501159667969 200.00003051757804,38.32395935058562) " stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_10" y2="67.147957" x2="231.695423" y1="9.499956" x1="168.304625" fill-opacity="null" stroke-opacity="null" stroke-width="17" fill="none"/>
+  <text stroke="#000" transform="matrix(2.9858314403783006,0,0,2.9858314403783006,-446.8319682430838,-510.48950899919805) " xml:space="preserve" text-anchor="start" font-family="Junction, sans-serif" font-size="24" id="svg_12" y="246.161593" x="159.256863" stroke-opacity="null" stroke-width="0" fill="#000000">G</text>
+  <text stroke="#000" transform="rotate(-46 172.2444763183594,75.40991973876955) matrix(3.0949962531205477,0,0,2.763210469011784,-622.8552314320345,-214.5544796823447) " xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_13" y="113.254757" x="246.913829" stroke-opacity="null" stroke-width="0" fill="#000000">M</text>
+ </g>
+</svg>
