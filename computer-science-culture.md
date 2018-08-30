@@ -8,7 +8,7 @@ Give each student a copy of the choosen paper and give them a week to read it. P
 
 Each student should answer the following questions independently.
 
-Potentially the students could writ up their responses on an online post board. After they post they could then read other students responses.
+Potentially the students could write up their responses on an online post board. After they post they could then read other students responses.
 
 ## Questions
 
