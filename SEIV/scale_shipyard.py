@@ -1,3 +1,21 @@
+TECH = ['''
+Name                  := Massive Space Yards
+Group                 := Applied Science
+Description           := Technology to construct Massive Space Yards.
+Maximum Level         := 4
+Level Cost            := 100000
+Start Level           := 0
+Raise Level           := 0
+Racial Area           := 0
+Unique Area           := 0
+Can Be Removed        := False
+Number of Tech Req    := 2
+Tech Area Req 1       := Space Yards
+Tech Level Req 1      := 3
+Tech Area Req 2       := Construction
+Tech Level Req 2      := 1
+'''
+]
 
 '''
 Name                  := Space Yard III
@@ -51,11 +69,11 @@ Vehicle Type          := Ship\Base
 Supply Amount Used    := 0
 Restrictions          := None
 General Group         := Construction
-Family                := 6
+Family                := {family}
 Roman Numeral         := 0
 Custom Group          := 0
 Number of Tech Req    := 1
-Tech Area Req 1       := Space Yards
+Tech Area Req 1       := Massive Space Yards
 Tech Level Req 1      := {tech_level}
 Number of Abilities   := 4
 Ability 1 Type        := Space Yard
@@ -80,13 +98,14 @@ Weapon Type           := None
 
 class ship_yard:
     def __init__(self, name, tech_level, scale):
-        self.base_tech_level = 3
+        self.base_tech_level = tech_level
         self.base_repair = 8
         self.base_construct = 2000
         self.base_cost_minerals = 4000
         self.base_cost_radioactives = 500
         self.base_tonnage = 400
         self.base_structure = int(self.base_tonnage / 2)
+        self.family = 901 + tech_level
 
         self.name = name
         self.scale = scale
@@ -101,7 +120,8 @@ class ship_yard:
             cost_minerals = self.base_cost_minerals * self.scale,
             cost_radioactives = self.base_cost_radioactives * self.scale,
             repair = self.base_repair * self.scale,
-            tech_level = self.base_tech_level + self.tech_level
+            tech_level = self.tech_level,
+            family = self.family
             )
 
 
@@ -117,4 +137,7 @@ t = "c"
 
 import helpers
 helpers.write_data_file(items, __file__, t)
+
+t = "t"
+helpers.write_data_file(TECH, __file__, t)
 

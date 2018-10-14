@@ -16,7 +16,8 @@ def write_data_file(items, run_file_name, file_type):
     lookup = {
         "c":"Components",
         "m":"Mounts",
-        "v":"VehicleSizes"
+        "v":"VehicleSizes",
+        "t":"TechArea"
     }
     
 
