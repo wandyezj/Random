@@ -1,0 +1,30 @@
+
+Long Name                      := Spinal Mount
+Short Name                     := Spinal
+Description                    := Spinal Mount. Requires a vehicle size of at least 500kT. Can only be used on Direct Fire weapons. 
+Code                           := S
+Cost Percent                   := 1000
+Tonnage Percent                := 1000
+Tonnage Structure Percent      := 1500
+Damage Percent                 := 1500
+Supply Percent                 := 1500
+Range Modifier                 := 1
+Weapon To Hit Modifier         := 20
+Vehicle Size Minimum           := 500
+Weapon Type Requirement        := Direct Fire
+Vehicle Type                   := Ship
+
+Long Name                      := Massive Spinal Mount
+Short Name                     := Massive Spinal
+Description                    := Massive Spinal Mount. Requires a vehicle size of at least 1000kT. Can only be used on Direct Fire weapons. 
+Code                           := SM
+Cost Percent                   := 2000
+Tonnage Percent                := 2000
+Tonnage Structure Percent      := 3000
+Damage Percent                 := 3000
+Supply Percent                 := 3000
+Range Modifier                 := 2
+Weapon To Hit Modifier         := 40
+Vehicle Size Minimum           := 1000
+Weapon Type Requirement        := Direct Fire
+Vehicle Type                   := Ship

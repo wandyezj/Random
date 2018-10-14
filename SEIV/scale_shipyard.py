@@ -105,21 +105,16 @@ class ship_yard:
             )
 
 
-scales = [
+items = [
     ship_yard("Medium Space Yard", 1, 2),
     ship_yard("Large Space Yard", 2, 5),
     ship_yard("Industrial Complex", 3, 10),
     ship_yard("Massive Industrial Complex", 4, 20),
 ]
 
-for scale in scales:
-    print(str(scale))
-    print()
 
+t = "c"
 
-
-
-
-
-
+import helpers
+helpers.write_data_file(items, __file__, t)
 

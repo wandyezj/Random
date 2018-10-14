@@ -61,6 +61,8 @@ Maintainence cost to store resources.
 
 Combat Best Experience
 
+### Master Computer for troops and fighters
+
 ### It is possible to construct planets without a star?
 
 ### Solar Resource Generation component from stellar harnesing
@@ -82,3 +84,16 @@ Codes S and MS, only allow for battleships and dreadnoughts
 
 x10 = 40 -> 400, 70 -> 700
 x15 = 20 -> 300, 30->450,  40 -> 600, 50 -> 750, 70 -> 1050
+
+### Miniture Missile Mounts
+
+### Massive Construction
+
+### Larger Ships with 1 movement?, reduced maintanence
+
+
+Barge 2000 KT
+Star Fortress 5000 KT
+Artificial Moon 10000 KT
+
+### Accessible Racial Tech
