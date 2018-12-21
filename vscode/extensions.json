@@ -1,0 +1,30 @@
+﻿{
+
+    "recommendations": [
+
+    // Collorize paired brackets
+    "coenraads.bracket-pair-colorizer",
+
+    // lint for markdown
+    "avidanson.vscode-markdownlint",
+
+    // highlight TODO:
+    "wayou.vscode-todo-highlight",
+
+    // typescript linter
+    "eg2.tslint",
+
+    // spell check
+    "streetsidesoftware.code-spell-checker",
+
+    // make code pretty
+    "hookyqr.beautify",
+
+    // icons for VS Code
+    "robertohuertasm.vscode-icons",
+
+    // mermaid graphing for markdown
+    "bierner.markdown-mermaid"
+    ]
+
+}
