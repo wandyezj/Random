@@ -39,6 +39,7 @@ Samsung SSD 850 EVO 500GB X 3
 
 ## Router
 [TRENDnet AC 1750 Dual Band Wireless Router](http://www.trendnet.com/products/wifi/AC-routers/AC1750/TEW-812DRU)
+[ASUS ASUS Whole Home Dual-Band AiMesh Router AC1900](https://www.asus.com/us/Commercial-Networking/AiMesh-AC1900-WiFi-System-RT-AC68U-2-Pack/)
 
 ## Monitor
 
