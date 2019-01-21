@@ -8,10 +8,10 @@
 
 ## Exploring Company Engineering Cultures
 
-* Microsoft - shrink wrap software
+* Microsoft - Shrink Wrap Software
     * Buisness Oriented
     * Cost of changes is high
-    * Begin super reliable is extreamly important
+    * Being super reliable is extreamly important
     * Not breaking things is extreamly important
     * Lack of process leads to issues
 * Google - Cathedral
