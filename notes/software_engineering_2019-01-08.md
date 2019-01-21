@@ -1,10 +1,13 @@
 # Software Engineering - Architecture
 
-* Large projects across engineering have a common arc.
-    * design
-    * build
-    * operate
-    * retirement
+[Markdown Writeup On GitHub](https://github.com/wandyezj/Random/blob/master/notes/software_engineering_2019-01-08.md)
+
+Large projects across engineering have a common arc.
+
+* design
+* build
+* operate
+* retirement
 
 ## Exploring Company Engineering Cultures
 
@@ -39,3 +42,8 @@
         * What went wrong?
         * How to fix?
         * How to prevent it from happening again?
+
+## Hand Written Notes
+![Handwritten Notes Page 1](.\software_engineering_2019-01-08_1.jpg)
+
+![Handwritten Notes Page 2](.\software_engineering_2019-01-08_2.jpg)
