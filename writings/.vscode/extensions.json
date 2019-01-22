@@ -14,7 +14,10 @@
 
 	"unwantedRecommendations": [
 		"msjsdiag.debugger-for-chrome",
-		"ms-vsts.team"
-
+		"ms-vsts.team",
+		"eamodio.gitlens",
+		"felipecaputo.git-project-manager",
+		"donjayamanne.githistory",
+		"eg2.tslint"
 	]
 }
