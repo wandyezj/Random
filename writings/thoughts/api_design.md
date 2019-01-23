@@ -9,6 +9,10 @@ Compatibility
 
 Security
 
+Debugging
+
+Error Handling
+
 ## Structure
 
 Dependent on the Model
@@ -21,6 +25,11 @@ What is the actual structure of the API
 
 Side Effects?
 
+Performance:
+
+* CPU
+* Memory
+
 ## Case Studies
 
 * SQL
@@ -29,3 +38,9 @@ Side Effects?
     * but the same model
 * JavaScript
 * Web Standards
+
+## References
+
+Paper on architectures
+
+Paper on agreed upon items
