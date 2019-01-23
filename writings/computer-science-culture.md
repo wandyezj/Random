@@ -4,7 +4,7 @@ The following papers are meant to start discussions about topics in Computer Sci
 
 # Procedure
 
-Give each student a copy of the choosen paper and give them a week to read it. Possibly giving it out on Friday and discussing the paper the following Friday.
+Give each student a copy of the chosen paper and give them a week to read it. Possibly giving it out on Friday and discussing the paper the following Friday.
 
 Each student should answer the following questions independently.
 
@@ -35,5 +35,5 @@ Potentially the students could write up their responses on an online post board.
     * Thinking about knowledge and how to solve problems.
 
 * [The Computer of the 21st Century](https://www.google.com/url?sa=t&source=web&rct=j&url=https://www.ics.uci.edu/~corps/phaseii/Weiser-Computer21stCentury-SciAm.pdf&ved=2ahUKEwjOx5yCnu3cAhWI54MKHae9BhAQFjABegQICBAB&usg=AOvVaw1Om886fu-OIQvuWfKTUK9E&cshid=1534273460141)
-    * Kick off a discussion about Ubiquituous Computing, what could the world be like with computers integrated seemlessly into every day life?
+    * Kick off a discussion about Ubiquitous Computing, what could the world be like with computers integrated seamlessly into every day life?
 
