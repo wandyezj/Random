@@ -2,22 +2,50 @@
 
 ## Take away
 
-* Designing the system to to effectively build the software to deliver the results.
+What are some general considerations a Software Architect should keep in mind when designing a piece of Software?
+
+* Designing the system to effectively build the software to deliver the results.
+
+* must be buildable
 
 ## Two sentence summary
 
 1. Define business objectives
-1. Translate objectives into technical 
+1. Translate objectives into technical
 
 How to build a good system to build good software? Engineering the system to deliver results to achieve system goals.
 
+Extract the general architecture rules of thumb applicable to a wide audience.
+
 ## Methodology
 
-* interviews
+* interviews - with architects.
 
-* readings
+* readings - summary of key interesting points.
 
 ## Brain Storm
+
+* Checklist of areas to think about
+
+* different types of systems:
+    * legacy system maintenance
+    * new system
+    * something that works with legacy - most cases - untangling the web - understanding the environment
+    * what scale is the system at?
+    * script
+    * medium size
+    * massive
+    * where are you in the process?
+    * scope of the change
+    * introducing changes
+
+
+
+Conventions
+
+Focus on the software
+
+What is the role of the Software Architect?
 
 What do software architects do?
 
