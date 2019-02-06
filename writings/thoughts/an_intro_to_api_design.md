@@ -4,17 +4,17 @@
 
 Application Programming Interfaces (APIs) are the chief method for programmers to interact with software. APIs design can have a substantial impact on software quality.
 
-This paper will examine API design flaws that negatively impacted software quality and analyze what could have been done to prevent these flaws.
+This paper will examine API design flaws that lead to undesireable outcomes and analyze what could have been done to prevent these flaws.
 
 This paper will examine:
 
 * the general components of an API
-* specific case studies where flaws in API design negatively impacted software quality.
-* propose an API design process to reduce API design flaws.
+* specific case studies where flaws in API design lead to undesireable outcomes
+* examine an API design process to reduce API design flaws
 
-## API Anatomy
+## API Components
 
-Before examining specific cases where 
+Before examining specific cases where API design flaws lead to undesireable outcomes it is worth examining the components of an API to better understand the causes of the design flaw. 
 
 * Model
 * Structure
@@ -22,10 +22,26 @@ Before examining specific cases where
 
 ### Model
 
-* [A Relation Model of Data form Large Shared Data Banks - E. F. Codd](https://www.seas.upenn.edu/~zives/03f/cis550/codd.pdf)
+#### Definition
+
+The model of an API is it's underlying paradigm. The model consists of both a underlying technical model as well as mental model of the APIs meaning.
+
+#### Explanation
+
+Technical API models are usually well documented models such as:
+
+* the [Relational Model][Relational Algebra Model] that backs most modern databases
+* CPU Architecture x86, AMD64, ARM which describe how to interact with a CPU
+* Get Post Web Models
+* 
+* Languages: JavaScript, C, C++
+
+#### Notes
+
+[Relational Algebra Model]: https://www.seas.upenn.edu/~zives/03f/cis550/codd.pdf "A Relation Model of Data form Large Shared Data Banks - E. F. Codd"
     Introduction of a Model
 
-* [Markdown - CommonMark](https://commonmark.org/)
+[Markdown]: https://commonmark.org/ "Markdown - CommonMark"
 
 * Get Post Web Standard
 * CPU Architecture
@@ -39,10 +55,15 @@ Before examining specific cases where
 How to specify behavior?
 
 
-## Cases
+## Case Studies
+
+Now that we have examined the components 
 
 ### C / C++ strcpy
 
+#### Undesireable Outcome
+
+#### Notes
 Model did not solve the issue (not secure by default) Possible in C++ win encapsulated class.
 
 strcpy API example
@@ -73,6 +94,8 @@ Developers ended up using the API as a shortcut, Not as intended, additionally t
 
 ## API design process
 
+
+
 * [API Design Matters](https://queue.acm.org/detail.cfm?id=1255422)
 * https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/32713.pdf
 
@@ -90,6 +113,13 @@ Analysis of where to prevent issues common causes
 
 ## Scratch
 
+### Interviews
+
+* Examples of API Design flaws that lead to undesired outcomes
+* API Design process to reduce flaws
+
+
+### Other
 of case studies of API design flaws and
 
  that Software Quality and what we can learn from
