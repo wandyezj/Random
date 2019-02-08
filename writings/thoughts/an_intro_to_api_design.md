@@ -71,6 +71,8 @@ http://www.cplusplus.com/reference/cstring/strcpy/
 strcpy_s
 
 
+[Control Flow Guard]: https://docs.microsoft.com/en-us/windows/desktop/secbp/control-flow-guard
+
 ### NASA’s Mars Climate Orbiter - Spacecraft Metric to Imperial units
 
 https://en.wikipedia.org/wiki/Mars_Climate_Orbiter
