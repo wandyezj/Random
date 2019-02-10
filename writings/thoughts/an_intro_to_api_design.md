@@ -108,16 +108,112 @@ Release of users information
 
 ### Windows GetVersion - compatibility
 
-The Windows GetVersion API is an example where the API works as intended but the underlying versioning model is flawed.
+The Windows [GetVersion API][GetVersion API] is an example where the API works as intended but the underlying mental model is flawed.
+
+The GetVersion API was intended to get the Operating Systems version.
+
+Developers ended up using the API as a shortcut to tie their application to a specific Operating System that they had verified their application on and would exit their application if a different Operating System version than expected were detected.
+
+An additional structural problem with this API is the way that the version is returned as a single DWORD that contains both the Major and Minor version. Developers would then have to parse out the Major and Minor version from the DWORD. As you can imagine this is not a trivial task and many developers got it wrong and did not get their behaviro as expected.
+
+This versioning API caused many Compatability issues for applications as new Operating System versions were released. New Operating Systems had higher versions which causes applications that would have worked perfectly well on newer Operating System versions to fail simply due to a version check.
+
+Since so many critical applications broke due to the abuse and misues of this API this required that eventually the API be completely replaced with a shim that lies to applications about what the underlying Operating System version is so that these applications would work.
+
+
+
+ tell what features were supported and would tie their applications to a specific operating system.
+
+ so that developers could tell what features were supported by the OS.
+
+Developers ended up using
+
+s model was flawed as developers used the A
+
 
 Developers ended up using the API as a shortcut, Not as intended, additionally the APIs structure was flawed where developer could easily misuse the returned version. This caused many compatability issues where software that was capable of running on newer versions of the Operationg System were unable to run due to the check. In order to keep applications working the API had to be shimmed, and essentially ended up a a liability instead of an asset.
 
+[GetVersion API]: https://docs.microsoft.com/en-us/windows/desktop/api/sysinfoapi/nf-sysinfoapi-getversion
+
 ## API design process
 
-The process of API design is a knowledge capture exercise. The goal is to capture as much information as possible into the APIs specification and clearly communicate that information to the implementers and users of the API.
+The process of API design is a knowledge capture exercise. The goal of the API Design process is to capture as much information as possible into the APIs specification and clearly communicate that information to the implementers and users of the API.
 
-* [API Design Matters](https://queue.acm.org/detail.cfm?id=1255422)
-* https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/32713.pdf
+API Designs that are useful, intuitive, and testable are time consuming to produce but the results are worth it.
+
+What can be done to maximize the benefit of the design process?
+
+The first thing that can be done to maximize the benefit of the design process is to think about an API as a standard to be applied to many situations. Many applications have similar needs or are made of of similar components there is no need to reinvent how to achieve an action.
+
+### Standard API
+
+An API should be thought of as a standard.
+
+Where possible APIs should be made abstract enough to apply across applications to common scenarios so that the same API pattern can be directly taken to new areas with only implementation details changing.
+
+Developers should only have to learn a pattern once for it to be widely applicable.
+
+Allowing the same API structure allows all the thought that went into the: design, documentation, and tests to be taken to the new implementation. This frees developers to focus on the interesting specific implementation and to innovate in new areas. 
+
+## The Exercise
+
+API design is an iterative process that should happen **before** implementation, constrained by implementation details.
+
+Throughout the exercise the proposed design should be made available for review and iterated on as needed.
+
+None of the design steps are do once, instead the design process goes between steps as needs although changes in previous design steps will impact later steps.
+
+### Scenarios
+
+First, API scenarios are defined: What should consumers of the API be able to do?
+
+Scenarios should:
+
+* define a real world use case where the API is immediately useful
+
+### Shape
+
+Next, the API shape is defined: interfaces, classes, enums, methods.
+
+Shape should:
+
+* make intuitive sense to many people without extensive background or documentation
+
+### Documentation
+
+Next, the the various shapes are documented.
+
+Documentation should:
+
+* cover the specific behavior of the API
+* give examples of how the API is used
+
+### Units
+
+Next, the documentation is turned into unit tests that should exercise all aspects of the API, including error conditions.
+
+Units should:
+
+* be specific
+* easy to understand
+* runnable tests
+* cover edge cases
+
+### Mocks
+
+Next, the defined scenarios are mocked up with the API to show that the API meets the scenario requirements.
+
+Mocks should:
+
+* show that the API accomplishes the defined scenario
+* show at a high level that the API interacts well with existing APIs
+
+
+## API Operation
+
+## API Deprecation
+
+
 
 ## Conclusion
 
@@ -132,6 +228,12 @@ Analysis of where to prevent issues common causes
 
 
 ## Scratch
+
+
+* [API Design Matters](https://queue.acm.org/detail.cfm?id=1255422)
+* https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/32713.pdf
+
+
 
 ### Interviews
 
