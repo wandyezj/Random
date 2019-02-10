@@ -72,6 +72,8 @@ The lesson is that an APIs structure aids the mental model programmers form and 
 
 
 
+[Control Flow Guard]: https://docs.microsoft.com/en-us/windows/desktop/secbp/control-flow-guard
+
 ### NASA’s Mars Climate Orbiter - Spacecraft Metric to Imperial units
 
 [NASA's Mars Climate Orbiter](https://en.wikipedia.org/wiki/Mars_Climate_Orbiter) mission failed partially due to poor API design at the cost of 327.6 million dollars.
