@@ -219,17 +219,20 @@ Who can access the API? (Security)
 
 Next, the documentation is turned into unit tests that would ideally exercise all aspects of the API as specified by the documentation, including error conditions.
 
-As discussed in [An Overview of Formal Methods Tools and Techniques](https://courses.cs.washington.edu/courses/csep503/19wi/schedule/papers/AnOverviewOfFormalMethodsToolsAndTechniques.pdf) there are various formal methods for software verification. Ideally every API could and would be formally verified. Unfortunantly, there are severe limitations to current formal methods, especially when APIs can abstract complex interactions underneath and can be linked to hetrogenous systems that are not formally verified. Another drawback is that currently applying these techniques is extreamly costly and generally not feasible for most software development. Thus in the abscence of formal methods the fall back is testing. 
+As discussed in [An Overview of Formal Methods Tools and Techniques](https://courses.cs.washington.edu/courses/csep503/19wi/schedule/papers/AnOverviewOfFormalMethodsToolsAndTechniques.pdf) there are various formal methods for software verification. Ideally every API could and would be formally verified. Unfortunantly, there are severe limitations to current formal methods, especially when APIs can abstract complex interactions underneath and can be linked to hetrogenous systems that are not formally verified. Another drawback is that currently applying these techniques is extreamly costly and generally not feasible for most software development. Additionally while formal methods may prove something mathmatically there is a difference between a mathmatical proof of software and software actually running on a real world system. Thus while verification can be a helpful tool its limitations mean that testing is still required.
 
-As discussed in [Software Testing: A Research Travelogue (2000–2014)](https://courses.cs.washington.edu/courses/csep503/19wi/schedule/papers/SoftwareTestingTravelogue.pdf) there are many ways to test software. Software testing does not provide the same level of guarentee that formal methods provide, however it is significantly less costly and can often provide some level of guarentee that the API was implemented according to the documentation.
- indication of how an API is intended to be used
+As discussed in [Software Testing: A Research Travelogue (2000–2014)](https://courses.cs.washington.edu/courses/csep503/19wi/schedule/papers/SoftwareTestingTravelogue.pdf) there are many ways to test software. Software testing provides a different set of guarentees than formal methods. Testing does not prove that software behaves in all circumstances according to documentation. Testing can show that an API produces the correct behavior in specific cases giving some confidence that the API performs correctly in similar cases. Testing is also generally significantly less costly to implement than formal software verification methods. 
+
+The general software testing follows a standard of expected input and expected output. Some output can be more difficult to test than others especially if it results in complex behavior dependent on an internal state. 
+
+Testing behavior is significantly more difficult to test than output
 
 Units should:
 
 * be specific
 * easy to understand
 * runnable tests
-* cover edge cases
+* cover common edge cases
 
 
 
