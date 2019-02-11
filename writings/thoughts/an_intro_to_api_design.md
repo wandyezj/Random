@@ -33,18 +33,17 @@ __Technical models__ are usually well documented interface models such as:
 * [Hypertext Transfer Protocol](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol)
 * Language Models: C, C++, JavaScript, Block programming etc... Languages generally provide specific means to accomplish various programming tasks and generally come with a standard set of conventions.
 
-__Mental models__ are the models that API users form in their head of how the API works. See [The Design of Everyday Things by Don Norman](http://www.nixdell.com/classes/HCI-and-Design-Spring-2017/The-Design-of-Everyday-Things-Revised-and-Expanded-Edition.pdf) for a full explanation of mental models. While Don Norman is generally describing interaction with physical objects the same concepts apply to API users.
 
-Generally an API model is founded on both a technical model and a mental model.
+__Mental models__ are the models that API users form in their head of how the API works. See [The Design of Everyday Things by Don Norman](http://www.nixdell.com/classes/HCI-and-Design-Spring-2017/The-Design-of-Everyday-Things-Revised-and-Expanded-Edition.pdf) for a full explanation of mental models. While Don Norman is generally describing interaction with physical objects the same concepts apply to APIs.
 
 ### Structure
 
-The structure of an API is the specific naming and parameters of function names, classes, interfaces, etc. that are used to interact with the API. The structure of an API is generally heavily influenced by its technical model as well as the mental model the API is attempting to represent.
+The structure of an API is the specific naming and parameters of function names, classes, interfaces, etc. that are used to interact with the API. The structure of an API is generally heavily influenced by its technical model as well as the mental model the API is attempting to represent. The structure of an API is also influenced by the other APIs around it which may conform to an overall Architectural model as discussed in [An Introduction to Software Architecture](https://courses.cs.washington.edu/courses/csep503/19wi/schedule/papers/IntroSA.pdf)
+
 
 ### Behavior
 
-The behavior and an API is what the API specifically does, or the effect that the API produces.
-
+The behavior and an API is what the API specifically does, or the effect that the API produces under specific circumstances. In some circumstances the APIs behavior may choose to be undefined. For example the parallel programming API standard [MPI](https://en.wikipedia.org/wiki/Message_Passing_Interface) defines some behavior as intentionally undefined to allow freedom of implementations while stil maintaining the overall standard.
 
 ## Case Studies
 
@@ -100,11 +99,15 @@ How could this happen? This seems like a flaw in the structure of the API provid
 
 ### Snapchat API
 
-
 Snapchat API
 https://apigee.com/about/blog/technology/api-mistakes-avoid
 https://www.newyorker.com/tech/annals-of-technology/anatomy-of-a-snap-attack
+https://gibsonsec.org/snapchat/
 Release of users information
+
+Combined wiht paper from reading
+
+Poor behavior
 
 ### Windows GetVersion - compatibility
 
@@ -155,13 +158,19 @@ Developers should only have to learn a pattern once for it to be widely applicab
 
 Allowing the same API structure allows all the thought that went into the: design, documentation, and tests to be taken to the new implementation. This frees developers to focus on the interesting specific implementation and to innovate in new areas. 
 
-## The Exercise
+## The API Design Exercise
 
 API design is an iterative process that should happen **before** implementation, constrained by implementation details.
 
 Throughout the exercise the proposed design should be made available for review and iterated on as needed.
 
 None of the design steps are do once, instead the design process goes between steps as needs although changes in previous design steps will impact later steps.
+
+1. [Scenarios](#scenarios)
+1. [Shape](#shapes)
+1. [Documentation](#documentation)
+1. [Units](#units)
+1. [Mocks](#mocks)
 
 ### Scenarios
 
@@ -170,6 +179,11 @@ First, API scenarios are defined: What should consumers of the API be able to do
 Scenarios should:
 
 * define a real world use case where the API is immediately useful
+* consider how to make the API general enough to apply to similar cases
+
+It's best to create an API when there is a real world need 
+
+[The World and The Machine](https://courses.cs.washington.edu/courses/csep503/19wi/schedule/papers/TheWorldAndTheMachine.pdf)
 
 ### Shape
 
