@@ -1,5 +1,7 @@
 # API Designs impact on Software Quality
 
+
+
 ## Thesis
 
 Application Programming Interfaces (APIs) are the chief method for programmers to interact with software. APIs design can have a substantial impact on software quality.
@@ -109,6 +111,9 @@ Combined wiht paper from reading
 
 Poor behavior
 
+[Robust De-anonymization of Large Datasets][Robust De-anonymization of Large Datasets]
+Where releasing any user data is problamatic
+
 ### Windows GetVersion - compatibility
 
 The Windows [GetVersion API][GetVersion API] is an example where the API works as intended but the underlying mental model is flawed.
@@ -166,6 +171,7 @@ Throughout the exercise the proposed design should be made available for review 
 
 None of the design steps are do once, instead the design process goes between steps as needs although changes in previous design steps will impact later steps.
 
+
 1. [Scenarios](#scenarios)
 1. [Shape](#shapes)
 1. [Documentation](#documentation)
@@ -181,17 +187,19 @@ Scenarios should:
 * define a real world use case where the API is immediately useful
 * consider how to make the API general enough to apply to similar cases
 
-It's best to create an API when there is a real world need 
-
-[The World and The Machine](https://courses.cs.washington.edu/courses/csep503/19wi/schedule/papers/TheWorldAndTheMachine.pdf)
+It's best to create an API when there is a real world need that is immediately served by the API. As dicussed in [The World and The Machine](https://courses.cs.washington.edu/courses/csep503/19wi/schedule/papers/TheWorldAndTheMachine.pdf) the first step to specifically understand the problem that is to be solved and what the API contributes to solving the problem.
 
 ### Shape
 
 Next, the API shape is defined: interfaces, classes, enums, methods.
 
+Ultimately the specific API shape is heavily influenced by the underlying model choosen for the API, architectural choices, and specific implementation language. 
+
 Shape should:
 
 * make intuitive sense to many people without extensive background or documentation
+
+The goal of API shape is to clearly project a mental model to the consumer of the API as to what the API does and how to use it. 
 
 ### Documentation
 
@@ -202,9 +210,19 @@ Documentation should:
 * cover the specific behavior of the API
 * give examples of how the API is used
 
+What data can the API expose? (Privacy)
+Who can access the API? (Security)
+
+
+
 ### Units
 
-Next, the documentation is turned into unit tests that should exercise all aspects of the API, including error conditions.
+Next, the documentation is turned into unit tests that would ideally exercise all aspects of the API as specified by the documentation, including error conditions.
+
+As discussed in [An Overview of Formal Methods Tools and Techniques](https://courses.cs.washington.edu/courses/csep503/19wi/schedule/papers/AnOverviewOfFormalMethodsToolsAndTechniques.pdf) there are various formal methods for software verification. Ideally every API could and would be formally verified. Unfortunantly, there are severe limitations to current formal methods, especially when APIs can abstract complex interactions underneath and can be linked to hetrogenous systems that are not formally verified. Another drawback is that currently applying these techniques is extreamly costly and generally not feasible for most software development. Thus in the abscence of formal methods the fall back is testing. 
+
+As discussed in [Software Testing: A Research Travelogue (2000–2014)](https://courses.cs.washington.edu/courses/csep503/19wi/schedule/papers/SoftwareTestingTravelogue.pdf) there are many ways to test software. Software testing does not provide the same level of guarentee that formal methods provide, however it is significantly less costly and can often provide some level of guarentee that the API was implemented according to the documentation.
+ indication of how an API is intended to be used
 
 Units should:
 
@@ -212,6 +230,9 @@ Units should:
 * easy to understand
 * runnable tests
 * cover edge cases
+
+
+
 
 ### Mocks
 
@@ -225,7 +246,7 @@ Mocks should:
 
 ## API Operation
 
-## API Deprecation
+## API Retirement
 
 
 
@@ -236,12 +257,13 @@ Analysis of where to prevent issues common causes
 
 
 
+## Reference
+[Robust De-anonymization of Large Datasets](https://courses.cs.washington.edu/courses/csep503/19wi/schedule/papers/deanonymization.pdf)
 
 
 
 
-
-## Scratch
+# Scratch
 
 
 * [API Design Matters](https://queue.acm.org/detail.cfm?id=1255422)
