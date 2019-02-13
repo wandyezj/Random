@@ -1,6 +1,4 @@
-# API Designs impact on Software Quality
-
-
+# API Design and Software Quality
 
 ## Thesis
 
@@ -13,6 +11,8 @@ This paper will examine:
 * the general components of an API
 * specific case studies where flaws in API design lead to undesireable outcomes
 * an API design process to reduce API design flaws
+
+This paper attempts to understand the components of tha API, show that flaws in APIs Design can lead to undesireable outcomes, and proposes a high level API Design process to attempt to reduce API design flaws.
 
 ## API Components
 
@@ -99,22 +99,6 @@ How could this happen? This seems like a flaw in the structure of the API provid
 
 
 
-### Snapchat API
-
-Snapchat API
-https://apigee.com/about/blog/technology/api-mistakes-avoid
-https://www.newyorker.com/tech/annals-of-technology/anatomy-of-a-snap-attack
-
-Snapchat API Attack
-https://gibsonsec.org/snapchat/
-Release of users information
-
-Combined wiht paper from reading
-
-Poor behavior
-
-[Robust De-anonymization of Large Datasets][Robust De-anonymization of Large Datasets]
-Where releasing any user data is problamatic
 
 ### Windows GetVersion - compatibility
 
@@ -291,6 +275,52 @@ Concept of Negative Usability Tokens
 
 [How to Design A good API and why it matters]:https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/32713.pdf
 
+
+[What makes APIs Hard to learn? Answers from Developers]: https://www.cs.mcgill.ca/~martin/papers/software2009a.pdf "What makes APIs Hard to learn? Answers from Developers"
+
+Essentially documentation is important, and some specifics about what make good examples.
+
+```
+Namely, to mitigate obstacles, API docu-mentation must 
+■ include good examples, 
+■ be complete, 
+■ support many complex usage scenarios, 
+■ be conveniently organized, and 
+■ include relevant design elements.
+```
+
+Code Examples:
+
+```
+Among  these,  the  most  prevalent  frustration was  that  snippets didn’t  provide  any  support  for thinking about “how to put things together:”
+```
+
+
+[API Design Reviews at Scale]: https://storage.googleapis.com/pub-tools-public-publication-data/pdf/45294.pdf "API Design Reviews at Scale"
+
+Focuses on the review process.
+
+Key Takeaways:
+
+* Fast feedback
+* Efficiency
+* Matching current API design, conventions and patterns
+* Consistent Reviewers
+* Review is effective and making API designs simpler
+
+```
+They found the peerreviews to be more efficient than API usability tests, whilealso effectively highlighting usability issues in the API de-sign. Thus, providing a more scalable method for evaluatingAPIs. In their data, lab studies were 16 times more pro-ductive than peer reviews. However, the peer reviews weresubstantially faster and didn’t face the same resource prob-lems as lab studies
+```
+
+```
+ This quick and contained back-and-forth di-rectly on the document allows feedback to be contained ina single source, with a trail of all conversation and decisionmaking logic. This approach isn’t without fault, as we reflecton in our analysis. Critically, the review remains iterative innature. Once both API owners and design reviewers agreeand sign-off on the API design, reviewers are then auto-matically assigned as reviewers on any future API changes(e.g. when an API moves from Beta to Generally Available,or if constraints elsewhere force a change to the originallyagreed upon design), this provides additional opportunity toreview the API, provide guidance on effective design, andensure that earlier feedback has been considered prior torelease, while also maintaining consistency. Critically, thishighlights that the review is not done after one linear passover the document, but rather continues to move and evolvethroughout the lifecycle of the API
+```
+
+
+```
+Samples of end user source code is however essential, asit allows reviewers to see in practice how the API is used,the way in which calls are strung together, the level of ab-stractions chosen, etc. The Apiness review program usesheuristic evaluation, combined with knowledge of exist-ing Google API designs, to evaluate amongst other things,Casy Study: Design Methodology#chi4good, CHI 2016, San Jose, CA, USA852
+naming conventions, level of abstraction, error messages,the resource model, the use of standard methods (GET,LIST, PUT, etc), and the use of common design patterns(e.g. pagination, long running operations, etc). Additionally,while also specifically evaluating the API in front of them,as previously mentioned, the Apiness reviewer is lookingfor consistency with existing Google APIs, and using preex-isting knowledge of potential usability issues to drive theirreviews. The Apiness team also goes beyond the surfaceof the API, looking also at the way in which an API will workwith Google’s programmatically generated client libraries
+```
 # Scratch
 
 
@@ -376,3 +406,22 @@ Model did not solve the issue (not secure by default) Possible in C++ win encaps
 strcpy API example
 http://www.cplusplus.com/reference/cstring/strcpy/
 strcpy_s
+
+
+
+### Snapchat API
+
+Snapchat API
+https://apigee.com/about/blog/technology/api-mistakes-avoid
+https://www.newyorker.com/tech/annals-of-technology/anatomy-of-a-snap-attack
+
+Snapchat API Attack
+https://gibsonsec.org/snapchat/
+Release of users information
+
+Combined wiht paper from reading
+
+Poor behavior
+
+[Robust De-anonymization of Large Datasets][Robust De-anonymization of Large Datasets]
+Where releasing any user data is problamatic
