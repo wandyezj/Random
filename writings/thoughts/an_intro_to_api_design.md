@@ -104,6 +104,8 @@ How could this happen? This seems like a flaw in the structure of the API provid
 Snapchat API
 https://apigee.com/about/blog/technology/api-mistakes-avoid
 https://www.newyorker.com/tech/annals-of-technology/anatomy-of-a-snap-attack
+
+Snapchat API Attack
 https://gibsonsec.org/snapchat/
 Release of users information
 
