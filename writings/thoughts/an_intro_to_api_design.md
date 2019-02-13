@@ -283,8 +283,10 @@ Analysis of where to prevent issues common causes
 
 
 ## Reference
+[Robust De-anonymization of Large Datasets][Robust De-anonymization of Large Datasets]
 [Robust De-anonymization of Large Datasets]:https://courses.cs.washington.edu/courses/csep503/19wi/schedule/papers/deanonymization.pdf "Robust De-anonymization of Large Datasets"
 
+[An Empirical Study of API Usability][An Empirical Study of API Usability]
 [An Empirical Study of API Usability]: https://bugcounting.net/pubs/esem13.pdf "An Empirical Study of API Usability"
 
 ```
@@ -299,10 +301,10 @@ Flexibility is a double-edged sword in API design: expe-rienced programmers can 
 
 Concept of Negative Usability Tokens
 
-
+[How to Design A good API and why it matters][How to Design A good API and why it matters]
 [How to Design A good API and why it matters]:https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/32713.pdf
 
-
+[What makes APIs Hard to learn? Answers from Developers][What makes APIs Hard to learn? Answers from Developers]
 [What makes APIs Hard to learn? Answers from Developers]: https://www.cs.mcgill.ca/~martin/papers/software2009a.pdf "What makes APIs Hard to learn? Answers from Developers"
 
 Essentially documentation is important, and some specifics about what make good examples.
@@ -322,7 +324,7 @@ Code Examples:
 Among  these,  the  most  prevalent  frustration was  that  snippets didn’t  provide  any  support  for thinking about “how to put things together:”
 ```
 
-
+[API Design Reviews at Scale][API Design Reviews at Scale]
 [API Design Reviews at Scale]: https://storage.googleapis.com/pub-tools-public-publication-data/pdf/45294.pdf "API Design Reviews at Scale"
 
 Focuses on the review process.
