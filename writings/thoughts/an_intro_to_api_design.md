@@ -35,17 +35,40 @@ __Technical models__ are usually well documented interface models such as:
 * [Hypertext Transfer Protocol](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol)
 * Language Models: C, C++, JavaScript, Block programming etc... Languages generally provide specific means to accomplish various programming tasks and generally come with a standard set of conventions.
 
+How is the technical model decided?
+    * Usually don't have a choice
+    * Essentially the technical model is domain specific
+    * we are looking for general rules that apply to all domains
+    * The domain can influence the mental model of users since the come at the API with a certain mind set
+
 
 __Mental models__ are the models that API users form in their head of how the API works. See [The Design of Everyday Things by Don Norman](http://www.nixdell.com/classes/HCI-and-Design-Spring-2017/The-Design-of-Everyday-Things-Revised-and-Expanded-Edition.pdf) for a full explanation of mental models. While Don Norman is generally describing interaction with physical objects the same concepts apply to APIs.
 
+How is the API Mental model shaped?
+What role does the mental model play in how the API is used?
+    * if users can't for a clear mental model they can't figure out how to use the API
+    * possibly use the API incorrectly
+
 ### Structure
 
-The structure of an API is the specific naming and parameters of function names, classes, interfaces, etc. that are used to interact with the API. The structure of an API is generally heavily influenced by its technical model as well as the mental model the API is attempting to represent. The structure of an API is also influenced by the other APIs around it which may conform to an overall Architectural model as discussed in [An Introduction to Software Architecture](https://courses.cs.washington.edu/courses/csep503/19wi/schedule/papers/IntroSA.pdf)
+The structure of an API is the specific naming and parameters of function names, classes, interfaces, etc. that are used to interact with the API. The structure of an API is generally heavily influenced by its technical model as well as the mental model the API is attempting to project. The structure of an API is also influenced by the other APIs around it which may conform to an overall Architectural model as discussed in [An Introduction to Software Architecture](https://courses.cs.washington.edu/courses/csep503/19wi/schedule/papers/IntroSA.pdf)
 
+What are some conventions that structures follow?
+    * Domain dependent
+    * JavaScript conventions
+    * naming coventions: see C++ standards
+
+[C++ Core Guidelines]: http://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines "C++ Core Guidelines"
+    * There may be conventions specific to the domain, such as Windows APIs
+[JavaScript Style Guide and Coding Conventions]: https://www.w3schools.com/js/js_conventions.asp "JavaScript Style Guide and Coding Conventions"
+
+    * Style is important for APIs so users know what to expect
 
 ### Behavior
 
 The behavior and an API is what the API specifically does, or the effect that the API produces under specific circumstances. In some circumstances the APIs behavior may choose to be undefined. For example the parallel programming API standard [MPI](https://en.wikipedia.org/wiki/Message_Passing_Interface) defines some behavior as intentionally undefined to allow freedom of implementations while stil maintaining the overall standard.
+
+What is good behavior?
 
 ## Case Studies
 
@@ -219,6 +242,10 @@ Units should:
 * easy to understand
 * runnable tests
 * cover common edge cases
+
+What is the purpose of units?
+    * ensure API performs as designed and documented
+    * show specifically how API behaves
 
 ### Mocks
 
