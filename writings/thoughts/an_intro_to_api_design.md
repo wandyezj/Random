@@ -149,7 +149,7 @@ Developers ended up using the API as a shortcut, Not as intended, additionally t
 
 The process of API design is a knowledge capture exercise. The goal of the API Design process is to capture as much information as possible into the APIs specification and clearly communicate that information to the implementers and users of the API.
 
-API Designs that are useful, intuitive, and testable are time consuming to produce but the results are worth it.
+API Designs that are useful, intuitive, and testable can be time consuming to produce but the results are worth it.
 
 What can be done to maximize the benefit of the design process?
 
@@ -171,7 +171,7 @@ API design is an iterative process that should happen **before** implementation,
 
 Throughout the exercise the proposed design should be made available for review and iterated on as needed.
 
-None of the design steps are do once, instead the design process goes between steps as needs although changes in previous design steps will impact later steps.
+None of the design steps are do once, instead the design process goes between steps as needed. Changes in previous design steps will impact later steps.
 
 
 1. [Scenarios](#scenarios)
@@ -179,6 +179,8 @@ None of the design steps are do once, instead the design process goes between st
 1. [Documentation](#documentation)
 1. [Units](#units)
 1. [Mocks](#mocks)
+1. [Review](#review)
+
 
 ### Scenarios
 
@@ -193,7 +195,7 @@ It's best to create an API when there is a real world need that is immediately s
 
 ### Shape
 
-Next, the API shape is defined: interfaces, classes, enums, methods.
+Next, the API shape is defined: interfaces, classes, enums, methods, etc...
 
 Ultimately the specific API shape is heavily influenced by the underlying model choosen for the API, architectural choices, and specific implementation language. 
 
@@ -215,19 +217,17 @@ Documentation should:
 What data can the API expose? (Privacy)
 Who can access the API? (Security)
 
-
-
 ### Units
 
 Next, the documentation is turned into unit tests that would ideally exercise all aspects of the API as specified by the documentation, including error conditions.
 
-As discussed in [An Overview of Formal Methods Tools and Techniques](https://courses.cs.washington.edu/courses/csep503/19wi/schedule/papers/AnOverviewOfFormalMethodsToolsAndTechniques.pdf) there are various formal methods for software verification. Ideally every API could and would be formally verified. Unfortunantly, there are severe limitations to current formal methods, especially when APIs can abstract complex interactions underneath and can be linked to hetrogenous systems that are not formally verified. Another drawback is that currently applying these techniques is extreamly costly and generally not feasible for most software development. Additionally while formal methods may prove something mathmatically there is a difference between a mathmatical proof of software and software actually running on a real world system. Thus while verification can be a helpful tool its limitations mean that testing is still required.
+As discussed in [An Overview of Formal Methods Tools and Techniques](https://courses.cs.washington.edu/courses/csep503/19wi/schedule/papers/AnOverviewOfFormalMethodsToolsAndTechniques.pdf) there are various formal methods for software verification. Ideally every API could and would be formally verified. Unfortunantly, there are severe limitations to current formal methods, especially when APIs can abstract complex interactions underneath and can be linked to hetrogenous systems that are difficult to formally verify. Another drawback to formal methods is that currently applying these techniques is extreamly costly and thus generally not feasible for most software development. Additionally, while formal methods may prove something mathmatically there is a difference between a mathmatical proof of software and software actually running on a real world system. Thus while verification can be a helpful tool its limitations mean that real world testing is still required.
 
-As discussed in [Software Testing: A Research Travelogue (2000–2014)](https://courses.cs.washington.edu/courses/csep503/19wi/schedule/papers/SoftwareTestingTravelogue.pdf) there are many ways to test software. Software testing provides a different set of guarentees than formal methods. Testing does not prove that software behaves in all circumstances according to documentation. Testing can show that an API produces the correct behavior in specific cases giving some confidence that the API performs correctly in similar cases. Testing is also generally significantly less costly to implement than formal software verification methods. 
+As discussed in [Software Testing: A Research Travelogue (2000–2014)](https://courses.cs.washington.edu/courses/csep503/19wi/schedule/papers/SoftwareTestingTravelogue.pdf) there are many ways to test software. Software testing provides a different set of guarentees than formal methods. Testing does not prove that software behaves in all circumstances according to documentation. Testing can show that an API produces the correct behavior in specific cases giving some confidence that the API performs correctly in similar cases. Testing is generally significantly less costly to implement than formal software verification methods. 
 
-The general software testing follows a standard of expected input and expected output. Some output can be more difficult to test than others especially if it results in complex behavior dependent on an internal state. 
+The general software testing follows a standard of expected input and comparing actual output with expected output. Some output can be more difficult to test than others especially if it results in complex behavior dependent on an internal state.
 
-Testing behavior is significantly more difficult to test than output
+The overall idea of writing the unit tests is to clearly explain what the APIs behavior looks like, and as a bonus potentially provide tests for actual implementation.
 
 Units should:
 
@@ -235,9 +235,6 @@ Units should:
 * easy to understand
 * runnable tests
 * cover common edge cases
-
-
-
 
 ### Mocks
 
@@ -247,6 +244,18 @@ Mocks should:
 
 * show that the API accomplishes the defined scenario
 * show at a high level that the API interacts well with existing APIs
+
+The idea of mocks is to give reviewers of the API an idea of how the API interacts with other APIs to solve the actual scenario. This is a test that the API actually serves the purpose it was designed for.
+
+### Review
+
+Throughout the process and at all phases the API should be available for review
+
+APIs are always in progress
+
+Review can happen in many ways:
+* Feedback from users using a deployed API
+* 
 
 
 ## API Operation
@@ -263,10 +272,24 @@ Analysis of where to prevent issues common causes
 
 
 ## Reference
-[Robust De-anonymization of Large Datasets](https://courses.cs.washington.edu/courses/csep503/19wi/schedule/papers/deanonymization.pdf)
+[Robust De-anonymization of Large Datasets]:https://courses.cs.washington.edu/courses/csep503/19wi/schedule/papers/deanonymization.pdf "Robust De-anonymization of Large Datasets"
+
+[An Empirical Study of API Usability]: https://bugcounting.net/pubs/esem13.pdf "An Empirical Study of API Usability"
+
+```
+Finding  descriptive,  non-ambiguous  names  for  API  fea-tures is problematic given that programmers may be usedto different terminologies
+
+Discovering  relations  between  API  types  (classes)  re-quires  significant  effort;  simple  designs  are  beneficial,especially to less experienced programmers.
+
+Accurate  and  complete  documentation  is  a  crucial  issuefor API usability; all the major usability flaws discoveredin our study trace back to unsatisfactory documentation.
+
+Flexibility is a double-edged sword in API design: expe-rienced programmers can take advantage of it, but it mayconfuse those with less practice.
+```
+
+Concept of Negative Usability Tokens
 
 
-
+[How to Design A good API and why it matters]:https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/32713.pdf
 
 # Scratch
 
@@ -274,6 +297,7 @@ Analysis of where to prevent issues common causes
 * [API Design Matters](https://queue.acm.org/detail.cfm?id=1255422)
 * https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/32713.pdf
 
+http://www.citeulike.org/
 
 
 ### Interviews
