@@ -82,13 +82,13 @@ The flaw in the design is two fold: First the underlying technical model in C / 
 
 Various alternative API designs exist that could have prevented this flaw:
 
-The model in C / C++ could have prevented writing off of the end of a buffer.
+* The model in C / C++ could have prevented writing off of the end of a buffer which is generaly undesireable behavior.
 
-The C++ string class helps mitigate the need to guard against buffer overflow when manipulating strings by providing an API that stores the length of the buffer with the  
+* The C++ string class helps mitigate the need to guard against buffer overflow when manipulating strings by providing an API that stores the length of the buffer with the  
 
-Some C / C++ compilers generate additional code to help prevent such issues such as [Control Flow Guard](https://docs.microsoft.com/en-us/windows/desktop/secbp/control-flow-guard). This helps relieve some of the mental burden on the programmer to fix such issues.
+* Some C / C++ compilers have options to generate additional code to help prevent such issues such as [Control Flow Guard](https://docs.microsoft.com/en-us/windows/desktop/secbp/control-flow-guard). This helps relieve some of the mental burden on the programmer to fix such issues.
 
-Linters can prompt programmers to use strcpy correctly and verify that the programmer checked that the destination has enough room for the source buffer.
+* Linters can prompt programmers to use strcpy correctly and verify that the programmer checked that the destination has enough room for the source buffer. However linters are essentially a band aid and point to an issue with the underlying model or API.
 
 Alternatively the API could have been designed in the first place to account for Buffer Overflow possibility in the model and prompt users to prevent such conditions by providing the length of the destination buffer as a future iteration of the API strcpy_s does.
 
@@ -226,13 +226,7 @@ Who can access the API? (Security)
 
 ### Units
 
-Next, the documentation is turned into unit tests that would ideally exercise all aspects of the API as specified by the documentation, including error conditions.
-
-As discussed in [An Overview of Formal Methods Tools and Techniques](https://courses.cs.washington.edu/courses/csep503/19wi/schedule/papers/AnOverviewOfFormalMethodsToolsAndTechniques.pdf) there are various formal methods for software verification. Ideally every API could and would be formally verified. Unfortunantly, there are severe limitations to current formal methods, especially when APIs can abstract complex interactions underneath and can be linked to hetrogenous systems that are difficult to formally verify. Another drawback to formal methods is that currently applying these techniques is extreamly costly and thus generally not feasible for most software development. Additionally, while formal methods may prove something mathmatically there is a difference between a mathmatical proof of software and software actually running on a real world system. Thus while verification can be a helpful tool its limitations mean that real world testing is still required.
-
-As discussed in [Software Testing: A Research Travelogue (2000–2014)](https://courses.cs.washington.edu/courses/csep503/19wi/schedule/papers/SoftwareTestingTravelogue.pdf) there are many ways to test software. Software testing provides a different set of guarentees than formal methods. Testing does not prove that software behaves in all circumstances according to documentation. Testing can show that an API produces the correct behavior in specific cases giving some confidence that the API performs correctly in similar cases. Testing is generally significantly less costly to implement than formal software verification methods. 
-
-The general software testing follows a standard of expected input and comparing actual output with expected output. Some output can be more difficult to test than others especially if it results in complex behavior dependent on an internal state.
+Next, the documentation is turned into unit tests that ideally exercise all aspects of the API as specified by the documentation, including error conditions.
 
 The overall idea of writing the unit tests is to clearly explain what the APIs behavior looks like, and as a bonus potentially provide tests for actual implementation.
 
@@ -246,6 +240,12 @@ Units should:
 What is the purpose of units?
     * ensure API performs as designed and documented
     * show specifically how API behaves
+
+As discussed in [An Overview of Formal Methods Tools and Techniques](https://courses.cs.washington.edu/courses/csep503/19wi/schedule/papers/AnOverviewOfFormalMethodsToolsAndTechniques.pdf) there are various formal methods for software verification. Ideally every API could and would be formally verified. Unfortunantly, there are severe limitations to current formal methods, especially when APIs can abstract complex interactions underneath and can be linked to hetrogenous systems that are difficult to formally verify. Another drawback to formal methods is that currently applying these techniques is extreamly costly and thus generally not feasible for most software development. Additionally, while formal methods may prove something mathmatically there is a difference between a mathmatical proof of software and software actually running on a real world system. Thus while verification can be a helpful tool its limitations mean that real world testing is still required.
+
+As discussed in [Software Testing: A Research Travelogue (2000–2014)](https://courses.cs.washington.edu/courses/csep503/19wi/schedule/papers/SoftwareTestingTravelogue.pdf) there are many ways to test software. Software testing provides a different set of guarentees than formal methods. Testing does not prove that software behaves in all circumstances according to documentation. Testing can show that an API produces the correct behavior in specific cases giving some confidence that the API performs correctly in similar cases. Testing is generally significantly less costly to implement than formal software verification methods. 
+
+The general software testing follows a standard of expected input and comparing actual output with expected output. Some output can be more difficult to test than others especially if it results in complex behavior dependent on an internal state.
 
 ### Mocks
 
@@ -266,12 +266,10 @@ APIs are always in progress
 
 Review can happen in many ways:
 * Feedback from users using a deployed API
-* 
+* API Usage Telemetry
+* Questions about the API on forums
 
-
-## API Operation
-
-## API Retirement
+Can rinse and repeat the process with a new version of the API but will possibly need to continue to supporting the old version.
 
 
 
@@ -284,11 +282,16 @@ Analysis of where to prevent issues common causes
 
 ## Reference
 [Robust De-anonymization of Large Datasets][Robust De-anonymization of Large Datasets]
+
 [Robust De-anonymization of Large Datasets]:https://courses.cs.washington.edu/courses/csep503/19wi/schedule/papers/deanonymization.pdf "Robust De-anonymization of Large Datasets"
 
+* Essentially any exposed data runs the risk of being able to identify users
+
 [An Empirical Study of API Usability][An Empirical Study of API Usability]
+
 [An Empirical Study of API Usability]: https://bugcounting.net/pubs/esem13.pdf "An Empirical Study of API Usability"
 
+* Concept of Negative Usability Tokens
 ```
 Finding  descriptive,  non-ambiguous  names  for  API  fea-tures is problematic given that programmers may be usedto different terminologies
 
@@ -299,15 +302,17 @@ Accurate  and  complete  documentation  is  a  crucial  issuefor API usability; 
 Flexibility is a double-edged sword in API design: expe-rienced programmers can take advantage of it, but it mayconfuse those with less practice.
 ```
 
-Concept of Negative Usability Tokens
+
 
 [How to Design A good API and why it matters][How to Design A good API and why it matters]
+
 [How to Design A good API and why it matters]:https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/32713.pdf
 
 [What makes APIs Hard to learn? Answers from Developers][What makes APIs Hard to learn? Answers from Developers]
+
 [What makes APIs Hard to learn? Answers from Developers]: https://www.cs.mcgill.ca/~martin/papers/software2009a.pdf "What makes APIs Hard to learn? Answers from Developers"
 
-Essentially documentation is important, and some specifics about what make good examples.
+* Essentially documentation is important, and some specifics about what make good examples.
 
 ```
 Namely, to mitigate obstacles, API docu-mentation must 
@@ -318,24 +323,25 @@ Namely, to mitigate obstacles, API docu-mentation must
 ■ include relevant design elements.
 ```
 
-Code Examples:
+* Code Examples:
 
 ```
 Among  these,  the  most  prevalent  frustration was  that  snippets didn’t  provide  any  support  for thinking about “how to put things together:”
 ```
 
 [API Design Reviews at Scale][API Design Reviews at Scale]
+
 [API Design Reviews at Scale]: https://storage.googleapis.com/pub-tools-public-publication-data/pdf/45294.pdf "API Design Reviews at Scale"
 
-Focuses on the review process.
+* Focuses on the review process.
 
-Key Takeaways:
+* Key Takeaways:
 
-* Fast feedback
-* Efficiency
-* Matching current API design, conventions and patterns
-* Consistent Reviewers
-* Review is effective and making API designs simpler
+    * Fast feedback
+    * Efficiency
+    * Matching current API design, conventions and patterns
+    * Consistent Reviewers
+    * Review is effective and making API designs simpler
 
 ```
 They found the peerreviews to be more efficient than API usability tests, whilealso effectively highlighting usability issues in the API de-sign. Thus, providing a more scalable method for evaluatingAPIs. In their data, lab studies were 16 times more pro-ductive than peer reviews. However, the peer reviews weresubstantially faster and didn’t face the same resource prob-lems as lab studies
@@ -350,6 +356,10 @@ They found the peerreviews to be more efficient than API usability tests, whilea
 Samples of end user source code is however essential, asit allows reviewers to see in practice how the API is used,the way in which calls are strung together, the level of ab-stractions chosen, etc. The Apiness review program usesheuristic evaluation, combined with knowledge of exist-ing Google API designs, to evaluate amongst other things,Casy Study: Design Methodology#chi4good, CHI 2016, San Jose, CA, USA852
 naming conventions, level of abstraction, error messages,the resource model, the use of standard methods (GET,LIST, PUT, etc), and the use of common design patterns(e.g. pagination, long running operations, etc). Additionally,while also specifically evaluating the API in front of them,as previously mentioned, the Apiness reviewer is lookingfor consistency with existing Google APIs, and using preex-isting knowledge of potential usability issues to drive theirreviews. The Apiness team also goes beyond the surfaceof the API, looking also at the way in which an API will workwith Google’s programmatically generated client libraries
 ```
+
+
+
+
 # Scratch
 
 
