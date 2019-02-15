@@ -14,6 +14,8 @@ This paper will examine:
 
 This paper attempts to understand the components of tha API, show that flaws in APIs Design can lead to undesireable outcomes, and proposes a high level API Design process to attempt to reduce API design flaws.
 
+
+
 ## API Components
 
 Before examining specific cases where API design flaws lead to undesireable outcomes it is worth examining the components of an API to better understand where design flaws can occur.
@@ -281,6 +283,9 @@ Analysis of where to prevent issues common causes
 
 
 ## Reference
+
+[How to write a technical paper]: https://homes.cs.washington.edu/~mernst/advice/write-technical-paper.html "How to write a technical paper"
+
 [Robust De-anonymization of Large Datasets][Robust De-anonymization of Large Datasets]
 
 [Robust De-anonymization of Large Datasets]:https://courses.cs.washington.edu/courses/csep503/19wi/schedule/papers/deanonymization.pdf "Robust De-anonymization of Large Datasets"
