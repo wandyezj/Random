@@ -28,6 +28,34 @@ What are some considerations when developing an API?
 
 ## Paper Structure
 
+An Application Programming Interface (API) is ultimately a way to access functionality. A key piece of accessing functionality is ease of use: being able to quickly discover, understand, and apply the provided functionality. This paper will examine considerations for how to design an API with ease of use in mind.
+
+This paper will look at ease of use considerations of four API aspects
+
+* [Model](#model),
+* [Behavior](#behavior),
+* [Structure](#structure), and,
+* [Documentation](#documentation).
+
+Each API aspect will explore its Purpose, Principals, and Patterns.
+
+What is each?
+
+Purpose
+
+Principles
+
+Patterns
+
+
+ that contribute towards 
+
+Each of the four aspects will highlight its Purpose, Princi from a usability standpoint
+
+
+can be designed for
+to communicate functionality.
+
 
 
 Like all software an API is constantly in development
@@ -53,9 +81,17 @@ Assume Functionality already exists
 ## Purpose
 
 
-## Context
+## Content
 
 How is the knowledge to be communicated defined?
+
+## Model
+
+## Structure
+
+## Behavior
+
+What happens when an error occurs?
 
 ## Documentation
 
@@ -65,6 +101,8 @@ tricky since party an API is a form of communication.
 
 
 ## References
+
+Mckechies Teaching Tips
 
 ### API Definition
 
