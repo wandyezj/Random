@@ -28,16 +28,23 @@ What are some considerations when developing an API?
 
 ## Paper Structure
 
-An Application Programming Interface (API) is ultimately a way to access functionality. A key piece of accessing functionality is ease of use: being able to quickly discover, understand, and apply the provided functionality. This paper will examine considerations for how to design an API with ease of use in mind.
+An Application Programming Interface (API) is ultimately a way to access functionality. One consideration of accessing functionality is ease of use: being able to quickly discover, understand, and apply the provided functionality. This paper will examine how to design an API with ease of use in mind.
 
-This paper will look at ease of use considerations of four API aspects
+This paper will look at ease of use of four API aspects:
 
 * [Model](#model),
 * [Behavior](#behavior),
 * [Structure](#structure), and,
 * [Documentation](#documentation).
 
-Each API aspect will explore its Purpose, Principals, and Patterns.
+Each API aspect will explore its __purpose__, __principals__, and __patterns__ related to ease of use:
+
+* __purpose__ is what it can contribute towards ease of use.
+* __principals__ are intended to give high level direction towards design considerations.
+* __patterns__ are derived from principals and are intended to give specific design guidance.
+
+
+The end of the paper is a [reference](#reference) section that summarizes papers that pertain to ease of use.
 
 What is each?
 
@@ -76,31 +83,34 @@ API Surface
 Assume Functionality already exists
 
 
-## Purpose, Principals, Patterns
+## Aspects
 
-## Purpose
+### Model
 
+
+### Behavior
+
+What happens when an error occurs?
+
+## Structure
+
+
+### Documentation
+
+## Conclusion
 
 ## Content
 
 How is the knowledge to be communicated defined?
 
-## Model
 
-## Structure
-
-## Behavior
-
-What happens when an error occurs?
-
-## Documentation
 
 ## Process for Fulfilling Purpose
 
 tricky since party an API is a form of communication.
 
 
-## References
+## Reference
 
 Mckechies Teaching Tips
 
