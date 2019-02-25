@@ -26,11 +26,20 @@ What are some considerations when developing an API?
 
 > This paper will attempt to answer that question.
 
+
+A well designed API can significantly reduce the life-cycle cost of software. A Poorly designed API can significantly increase the life-cycle cost of software.
+
+Reasons Why:
+
+API Surface
+
+Assume Functionality already exists
+
 ## Paper Structure
 
 An Application Programming Interface (API) is ultimately a way to access functionality. One consideration of accessing functionality is ease of use: being able to quickly discover, understand, and apply the provided functionality. This paper will examine how to design an API with ease of use in mind.
 
-This paper will look at ease of use of four API aspects:
+This paper will look at ease of use in four API aspects:
 
 * [Model](#model),
 * [Behavior](#behavior),
@@ -46,53 +55,17 @@ Each API aspect will explore its __purpose__, __principals__, and __patterns__ r
 
 The end of the paper is a [reference](#reference) section that summarizes papers that pertain to ease of use.
 
-What is each?
-
-Purpose
-
-Principles
-
-Patterns
-
-
- that contribute towards 
-
-Each of the four aspects will highlight its Purpose, Princi from a usability standpoint
-
-
-can be designed for
-to communicate functionality.
-
-
-
-Like all software an API is constantly in development
-
-The paper is structured
-
-Links to [referenced papers](#references) with summaries of their contents are at the end of the paper
-
-
-## Importance
-
-A well designed API can significantly reduce the life-cycle cost of software. A Poorly designed API can significantly increase the life-cycle cost of software.
-
-Reasons Why:
-
-API Surface
-
-Assume Functionality already exists
-
-
 ## Aspects
 
 ### Model
+
 
 
 ### Behavior
 
 What happens when an error occurs?
 
-## Structure
+### Structure
 
 
 ### Documentation
@@ -104,22 +77,17 @@ What happens when an error occurs?
 How is the knowledge to be communicated defined?
 
 
-
-## Process for Fulfilling Purpose
-
-tricky since party an API is a form of communication.
-
-
 ## Reference
 
-Mckechies Teaching Tips
+[McKeachie's Teaching Tips: Strategies, Research, and Theory for College and University Teachers]: https://www.amazon.com/McKeachies-Teaching-Tips-Wilbert-McKeachie/dp/1133936792
+
 
 ### API Definition
 
 [API Wikipedia]: https://en.wikipedia.org/wiki/Application_programming_interface
 [API Wikipedia][API Wikipedia]
 
-```
+```text
 an application programming interface (API) is a set of subroutine definitions, communication protocols, and tools for building software. In general terms, it is a set of clearly defined methods of communication among various components. A good API makes it easier to develop a computer program by providing all the building blocks, which are then put together by the programmer.
 ```
 
@@ -194,6 +162,8 @@ an application programming interface (API) is a set of subroutine definitions, c
 [The Design of Everyday Things by Don Norman]: http://www.nixdell.com/classes/HCI-and-Design-Spring-2017/The-Design-of-Everyday-Things-Revised-and-Expanded-Edition.pdf "The Design of Everyday Things by Don Norman"
 [The Design of Everyday Things by Don Norman][The Design of Everyday Things by Don Norman]
 
+* The idea of a mental model distinct from the underlying technical
+
 [Instruction Set Architectures]: https://en.wikipedia.org/wiki/Instruction_set_architecture "Instruction Set Architectures"
 [Instruction Set Architectures][Instruction Set Architectures]
 
@@ -203,8 +173,26 @@ an application programming interface (API) is a set of subroutine definitions, c
 [A Relation Model of Data form Large Shared Data Banks]: https://www.seas.upenn.edu/~zives/03f/cis550/codd.pdf "A Relation Model of Data form Large Shared Data Banks - E. F. Codd"
 [A Relation Model of Data form Large Shared Data Banks][A Relation Model of Data form Large Shared Data Banks]
 
+* Presents a Mental Model of Relational Algebra for use in querying a database.
+
 [An Introduction to Software Architecture]: https://courses.cs.washington.edu/courses/csep503/19wi/schedule/papers/IntroSA.pdf "An Introduction to Software Architecture"
 [An Introduction to Software Architecture][An Introduction to Software Architecture]
+
+```text
+it  is  important  to  be  able  to  recognize common paradigms  so  that  high-level  relationships  among  systems can  be understood
+```
+
+Abstract Data Types
+
+* software structure
+* specifications
+* invariant data structures
+* information hiding
+
+
+* Common patterns aid understanding
+* Understanding high level relationships is important to understand the system as a whole.
+
 
 ### API Structure
 
