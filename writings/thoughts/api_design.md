@@ -59,16 +59,58 @@ The end of the paper is a [reference](#reference) section that summarizes papers
 
 ### Model
 
+The model of an API is it's underlying paradigm. The model consists of both a __technical model__ and __mental model__.
+
+#### Model Purpose
+
+#### Model Principals
+
+#### Model Patterns
 
 
 ### Behavior
 
 What happens when an error occurs?
 
+#### Behavior Purpose
+
+#### Behavior Principals
+
+#### Behavior Patterns
+
+
 ### Structure
 
+#### Structure Purpose
+
+#### Structure Principals
+
+#### Structure Patterns
 
 ### Documentation
+
+Making sure it works well and is accessible from a development environment
+
+How the programmer types out an action
+
+Documentation can exist on multiple levels:
+
+* Mental Model
+* Specific Calls
+* Parameters
+* Performance Limitations
+* Interactions between APIs
+
+#### Documentation Purpose
+
+#### Documentation Principals
+
+#### Documentation Patterns
+
+* Paradigm Documentation
+* Examples
+* Applications
+* Tutorials
 
 ## Conclusion
 
@@ -79,7 +121,10 @@ How is the knowledge to be communicated defined?
 
 ## Reference
 
+### Teaching
+
 [McKeachie's Teaching Tips: Strategies, Research, and Theory for College and University Teachers]: https://www.amazon.com/McKeachies-Teaching-Tips-Wilbert-McKeachie/dp/1133936792
+
 
 
 ### API Definition
@@ -157,6 +202,10 @@ an application programming interface (API) is a set of subroutine definitions, c
 [An Empirical Study of API Usability]: https://bugcounting.net/pubs/esem13.pdf "An Empirical Study of API Usability"
 [An Empirical Study of API Usability][An Empirical Study of API Usability]
 
+
+[Intelligent Code Completion]: https://en.wikipedia.org/wiki/Intelligent_code_completion
+[Intelligent Code Completion][Intelligent Code Completion]
+
 ### API Model
 
 [The Design of Everyday Things by Don Norman]: http://www.nixdell.com/classes/HCI-and-Design-Spring-2017/The-Design-of-Everyday-Things-Revised-and-Expanded-Edition.pdf "The Design of Everyday Things by Don Norman"
@@ -166,6 +215,10 @@ an application programming interface (API) is a set of subroutine definitions, c
 
 [Instruction Set Architectures]: https://en.wikipedia.org/wiki/Instruction_set_architecture "Instruction Set Architectures"
 [Instruction Set Architectures][Instruction Set Architectures]
+
+* communicate with the CPU
+* often have very specific behaviors and complex interactions
+* many features
 
 [Hypertext Transfer Protocol]: https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol "Hypertext Transfer Protocol"
 [Hypertext Transfer Protocol][Hypertext Transfer Protocol]
@@ -182,16 +235,26 @@ an application programming interface (API) is a set of subroutine definitions, c
 it  is  important  to  be  able  to  recognize common paradigms  so  that  high-level  relationships  among  systems can  be understood
 ```
 
+* Common patterns aid understanding
+* Understanding high level relationships is important to understand the system as a whole.
+
 Abstract Data Types
 
 * software structure
 * specifications
+* language issues (modules, scope, types)
 * invariant data structures
 * information hiding
 
+Architectural Styles
 
-* Common patterns aid understanding
-* Understanding high level relationships is important to understand the system as a whole.
+* Pipes and Filters
+* Object Oriented
+* Event Based
+* Layered
+* Repositories
+* Interpreter
+* Heterogenous
 
 
 ### API Structure
@@ -199,8 +262,33 @@ Abstract Data Types
 [C++ Core Guidelines]: http://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines "C++ Core Guidelines"
 [C++ Core Guidelines][C++ Core Guidelines]
 
+* Conventions to follow for C++ code
+
+Philosophy
+
+* Express ideas directly in code
+* Express intent
+* type safe
+* compile time check then run time check
+* don't waste time or space
+* prefer immutable data to mutable data
+* encapsulate messy constructs
+* use supporting tools as appropriate
+
 [JavaScript Style Guide and Coding Conventions]: https://www.w3schools.com/js/js_conventions.asp "JavaScript Style Guide and Coding Conventions"
 [JavaScript Style Guide and Coding Conventions][JavaScript Style Guide and Coding Conventions]
+
+* improves code readability
+* improve maintenance
+
+* variable names
+* spaces
+* indentation
+* naming conventions
+* initialize variables
+* be aware of automatic type conversion
+* be aware of defaults
+
 
 ### API Behavior
 
