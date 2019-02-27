@@ -19,3 +19,6 @@ add a .markdownlint.json file to the project directory to ignore annoying rules:
 [MD013 - Line length](https://github.com/DavidAnson/markdownlint/blob/v0.11.0/doc/Rules.md#md013)
 
 
+## Extensions
+
+https://code.visualstudio.com/docs/editor/extension-gallery
