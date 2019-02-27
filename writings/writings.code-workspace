@@ -1,0 +1,31 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"cSpell.words": [
+		]
+
+	},
+	"recommendations": [
+		// Extension identifier format: ${publisher}.${name}. Example: vscode.csharp
+		"goessner.mdmath",
+		"bierner.markdown-mermaid",
+		"Gruntfuggly.todo-tree",
+		"wayou.vscode-todo-highlight",
+		"DavidAnson.vscode-markdownlint",
+		"streetsidesoftware.code-spell-checker",
+		"ban.spellright"
+	],
+
+	"unwantedRecommendations": [
+		"msjsdiag.debugger-for-chrome",
+		"ms-vsts.team",
+		"eamodio.gitlens",
+		"felipecaputo.git-project-manager",
+		"donjayamanne.githistory",
+		"eg2.tslint"
+	]
+}
