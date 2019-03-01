@@ -37,7 +37,7 @@ Assume Functionality already exists
 
 ## Paper Structure
 
-An Application Programming Interface (API) is ultimately a way to access functionality. One consideration of accessing functionality is ease of use: being able to quickly discover, understand, and apply the provided functionality. This paper will examine how to design an API with ease of use in mind.
+An Application Programming Interface (API) is ultimately a way to access functionality. One consideration of accessing functionality is ease of use: being able to quickly discover, understand, and apply the provided functionality. This paper will examine considerations for designing an API with ease of use in mind.
 
 This paper will look at ease of use in four API aspects:
 
@@ -53,13 +53,33 @@ Each API aspect will explore its __purpose__, __principals__, and __patterns__ r
 * __patterns__ are derived from principals and are intended to give specific design guidance.
 
 
-The end of the paper is a [reference](#reference) section that summarizes papers that pertain to ease of use.
+The end of the paper is a [reference section](#reference) that summarizes papers that pertain to ease of use.
+
+### Personal Reference Philosophy
+
+* References are descriptive links to the item in the reference section.
+* External references are available via hyperlink for easy access.
+* The Reference section summarizes the references to more easily understand key takeaways.
 
 ## Aspects
 
 ### Model
 
-The model of an API is it's underlying paradigm. The model consists of both a __technical model__ and __mental model__.
+The model of an API is it's underlying paradigm. The model consists of both a __technical model__ and __mental model__. T
+
+The __Technical Model__ is how the API is implemented and imposes constraints on design. In general the __Technical Model__ is usually a well known paradigm.
+
+Some well known __Technical Models__ include:
+
+* [Instruction Set Architectures](#Instruction-Set-Architectures) such as x86, AMD64, and ARM
+* [Relational Model](#Relational-Algebra-Model) that backs most modern databases.
+* [Hypertext Transfer Protocol](#Hypertext-Transfer-Protocol)
+* Language Models: C, C++, JavaScript, TypeScript, Block programming etc...
+    * Languages generally provide specific means to accomplish various programming tasks and generally come with a standard set of conventions.
+
+The __Technical Model__ provides the foundation for which an API is based and comes with a certain set of expectations about how features in the model are used.
+
+The __Mental Model__ is the users map of what that API represent and how that API pieces fit together to accomplish tasks. See [The Design of Everyday Things by Don Norman](The-Design-of-Everyday-Things-by-Don-Norman) chapter 1 for a good explanation of mental models.
 
 #### Model Purpose
 
@@ -138,6 +158,7 @@ an application programming interface (API) is a set of subroutine definitions, c
 
 ### API Importance
 
+#### API Design and Why it matters
 [API Design and Why it matters]: https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/32713.pdf "API Design and Why it matters"
 [API Design and Why it matters][API Design and Why it matters]
 
@@ -146,6 +167,7 @@ an application programming interface (API) is a set of subroutine definitions, c
 * Public APIs are forever
 * Thinking in terms of APIs improves code quality
 
+#### API Design Matters
 [API Design Matters]: https://queue.acm.org/detail.cfm?id=1255422 "API Design Matters"
 [API Design Matters][API Design Matters]
 
@@ -165,17 +187,20 @@ an application programming interface (API) is a set of subroutine definitions, c
 
 ### API Solution
 
+#### The World and The Machine
 [The World and The Machine]: https://courses.cs.washington.edu/courses/csep503/19wi/schedule/papers/TheWorldAndTheMachine.pdf "The World and The Machine"
 [The World and The Machine][The World and The Machine]
 
 ### API Usability
 
+#### Measuring API Usability
 [Measuring API Usability]: http://www.drdobbs.com/windows/measuring-api-usability/184405654 "Measuring API Usability"
 [Measuring API Usability][Measuring API Usability]
 
 * Scenario based approach
 * Evaluate actual users attempting to accomplish tasks
 
+#### What makes APIs Hard to learn
 [What makes APIs Hard to learn? Answers from Developers]: https://www.cs.mcgill.ca/~martin/papers/software2009a.pdf "What makes APIs Hard to learn? Answers from Developers"
 [What makes APIs Hard to learn? Answers from Developers][What makes APIs Hard to learn? Answers from Developers]
 
@@ -199,19 +224,23 @@ an application programming interface (API) is a set of subroutine definitions, c
     * tutorials - complete application
     * applications - samples, and open source projects
 
+#### An Empirical Study of API Usability
+
 [An Empirical Study of API Usability]: https://bugcounting.net/pubs/esem13.pdf "An Empirical Study of API Usability"
 [An Empirical Study of API Usability][An Empirical Study of API Usability]
 
-
+#### Intelligent Code Completion
 [Intelligent Code Completion]: https://en.wikipedia.org/wiki/Intelligent_code_completion
 [Intelligent Code Completion][Intelligent Code Completion]
 
-### API Model
-
+#### The Design of Everyday Things by Don Norman
 [The Design of Everyday Things by Don Norman]: http://www.nixdell.com/classes/HCI-and-Design-Spring-2017/The-Design-of-Everyday-Things-Revised-and-Expanded-Edition.pdf "The Design of Everyday Things by Don Norman"
 [The Design of Everyday Things by Don Norman][The Design of Everyday Things by Don Norman]
 
 * The idea of a mental model distinct from the underlying technical
+
+#### Instruction Set Architectures
+
 
 [Instruction Set Architectures]: https://en.wikipedia.org/wiki/Instruction_set_architecture "Instruction Set Architectures"
 [Instruction Set Architectures][Instruction Set Architectures]
@@ -220,19 +249,22 @@ an application programming interface (API) is a set of subroutine definitions, c
 * often have very specific behaviors and complex interactions
 * many features
 
+#### Hypertext Transfer Protocol
 [Hypertext Transfer Protocol]: https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol "Hypertext Transfer Protocol"
 [Hypertext Transfer Protocol][Hypertext Transfer Protocol]
 
+#### Relational Model
 [A Relation Model of Data form Large Shared Data Banks]: https://www.seas.upenn.edu/~zives/03f/cis550/codd.pdf "A Relation Model of Data form Large Shared Data Banks - E. F. Codd"
 [A Relation Model of Data form Large Shared Data Banks][A Relation Model of Data form Large Shared Data Banks]
 
-* Presents a Mental Model of Relational Algebra for use in querying a database.
+* Presents a Technical Model of Relational Algebra for use in querying a database.
 
+#### An Introduction to Software Architecture
 [An Introduction to Software Architecture]: https://courses.cs.washington.edu/courses/csep503/19wi/schedule/papers/IntroSA.pdf "An Introduction to Software Architecture"
 [An Introduction to Software Architecture][An Introduction to Software Architecture]
 
 ```text
-it  is  important  to  be  able  to  recognize common paradigms  so  that  high-level  relationships  among  systems can  be understood
+it is important to be able to recognize common paradigms so that high-level relationships among systems can be understood
 ```
 
 * Common patterns aid understanding
@@ -259,6 +291,7 @@ Architectural Styles
 
 ### API Structure
 
+#### C++ Core Guidelines
 [C++ Core Guidelines]: http://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines "C++ Core Guidelines"
 [C++ Core Guidelines][C++ Core Guidelines]
 
@@ -275,6 +308,7 @@ Philosophy
 * encapsulate messy constructs
 * use supporting tools as appropriate
 
+#### JavaScript Style Guide and Coding Conventions
 [JavaScript Style Guide and Coding Conventions]: https://www.w3schools.com/js/js_conventions.asp "JavaScript Style Guide and Coding Conventions"
 [JavaScript Style Guide and Coding Conventions][JavaScript Style Guide and Coding Conventions]
 
