@@ -85,7 +85,7 @@ The __Mental Model__ is the users map of what that API represent and how that AP
 
 The purpose of the __Technical Model__ is to ground the API in a technical implementation. The __Technical Model__ constrains the APIs implementation and how it is exposed.
 
-The purpose of the __Mental Model__ is to provide an overall model for how the API interacts.
+The purpose of the __Mental Model__ is to provide an overall model for what the API represents and how it can be interacted with.
 
 Together the __Technical Model__ and __Mental Model__ provide the platform on which to build the API.
 
@@ -167,6 +167,10 @@ Documentation can exist on multiple levels:
 * Tutorials
 
 ## Conclusion
+
+* keep it simple
+* keep it known
+* keep it explainable
 
 ## Content
 
