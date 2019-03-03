@@ -79,24 +79,58 @@ Some well known __Technical Models__ include:
 
 The __Technical Model__ provides the foundation for which an API is based and comes with a certain set of expectations about how features in the model are used.
 
-The __Mental Model__ is the users map of what that API represent and how that API pieces fit together to accomplish tasks. See [The Design of Everyday Things by Don Norman](The-Design-of-Everyday-Things-by-Don-Norman) chapter 1 for a good explanation of mental models.
+The __Mental Model__ is the users map of what that API represent and how that API pieces fit together to accomplish tasks. See [The Design of Everyday Things by Don Norman](#The-Design-of-Everyday-Things-by-Don-Norman) chapter 1 for a good explanation of mental models.
 
 #### Model Purpose
 
+The purpose of the __Technical Model__ is to ground the API in a technical implementation. The __Technical Model__ constrains the APIs implementation and how it is exposed.
+
+The purpose of the __Mental Model__ is to provide an overall model for how the API interacts.
+
+Together the __Technical Model__ and __Mental Model__ provide the platform on which to build the API.
+
 #### Model Principals
+
+In general it's better if the __Mental Model__ and __Technical Model__ are already known to users as this significantly reduces the amount of learning a user needs to to to be able to use the API. If using an existing model it's best to follow the model as closely as possible since any deviation can surprise users and lead to mistakes in code.
+
+Simpler is generally easier to understand, making the __Mental Model__ and __Technical Model__ have as few steps or pieces as possible will generally make it easier to grasp.
 
 #### Model Patterns
 
+* Choose or build off a well known model when possible.
+
+Example:
+
+JSON and XML are well known data interchange formats, it's much easier to use these __Technical Models__ than to attempt to create and explain a new format.
+
+
 
 ### Behavior
+
+The behavior of an API includes all the effects that it has in both successful and error cases.
 
 What happens when an error occurs?
 
 #### Behavior Purpose
 
+The purpose of an APIs behavior is to accomplish its assigned task. 
+
 #### Behavior Principals
 
+* Behavior should be understandable.
+* A single function call should accomplish one easily explainable task
+
 #### Behavior Patterns
+
+* Simple behavior
+
+* Clear error handling and patterns, avoid mixing patterns
+
+* HRESULTS
+* exceptions
+* global error
+*ignor error
+* boolean
 
 
 ### Structure
