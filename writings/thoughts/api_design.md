@@ -111,12 +111,14 @@ What can it do and what should it be allowed to do?
 
 #### Behavior Purpose
 
-The purpose of an APIs behavior is to accomplish its assigned task and provide feedback on that tasks status.
+The purpose of an APIs behavior is to accomplish its assigned task and provide feedback on that tasks status and the current state of the model.
 
 #### Behavior Principals
 
-* Behavior should be understandable.
-* A single function call should accomplish one easily explainable task
+* Succinctly explainable behavior is desirable.
+* Having a single function call accomplish one explainable behavior is easier to explain.
+* Special cases add complexity and can be harder to explain.
+* Understanding the current state of the model is generally helpful.
 
 #### Behavior Patterns
 
@@ -139,13 +141,17 @@ The structure of an API is the interface for interaction. The structure is based
 
 #### Structure Purpose
 
-The purpose of API structure is to provide the concrete blocks of interaction the user can access. The structure contributes towards shaping the users __Mental Model__ 
+The purpose of API structure is to provide the concrete blocks of interaction the user can access. The structure contributes towards representing allowed behavior and shaping the users __Mental Model__ of the API. The structure also contributes towards the readability of the final sequence of interaction blocks.
 
 #### Structure Principals
 
+* Having the same structure represent the same concept is easier to understand and remember.
+* d
+
+
 #### Structure Patterns
 
-
+* Strong Types
 
 ### Documentation
 
