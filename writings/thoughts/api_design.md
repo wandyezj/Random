@@ -52,7 +52,6 @@ Each API aspect will explore its __purpose__, __principals__, and __patterns__ r
 * __principals__ are intended to give high level direction towards design considerations.
 * __patterns__ are derived from principals and are intended to give specific design guidance.
 
-
 The end of the paper is a [reference section](#reference) that summarizes papers that pertain to ease of use.
 
 ### Personal Reference Philosophy
@@ -104,16 +103,15 @@ Example:
 JSON and XML are well known data interchange formats, it's much easier to use these __Technical Models__ than to attempt to create and explain a new format.
 
 
-
 ### Behavior
 
-The behavior of an API includes all the effects that it has in both successful and error cases.
+The behavior of an API includes all the effects that it has. API behavior includes both success and error cases.
 
-What happens when an error occurs?
+What can it do and what should it be allowed to do?
 
 #### Behavior Purpose
 
-The purpose of an APIs behavior is to accomplish its assigned task. 
+The purpose of an APIs behavior is to accomplish its assigned task and provide feedback on that tasks status.
 
 #### Behavior Principals
 
@@ -129,17 +127,25 @@ The purpose of an APIs behavior is to accomplish its assigned task.
 * HRESULTS
 * exceptions
 * global error
-*ignor error
+* ignor error
 * boolean
 
+Can understand the current state of the system
+Some action was taken, what is the current status of that action? Can I see the current status of the model? Can I roll back that change? These help the use play around with the API when learning
 
 ### Structure
 
+The structure of an API is the interface for interaction. The structure is based in the __Technical Model__ and can help shape the desired __Mental Model__ for the user. The structure is usually made of the methods, classes, and interfaces available to the user but the specifics are dependent on the __Technical Model__.
+
 #### Structure Purpose
+
+The purpose of API structure is to provide the concrete blocks of interaction the user can access. The structure contributes towards shaping the users __Mental Model__ 
 
 #### Structure Principals
 
 #### Structure Patterns
+
+
 
 ### Documentation
 
