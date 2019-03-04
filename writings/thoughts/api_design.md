@@ -58,7 +58,7 @@ The end of the paper is a [reference section](#reference) that summarizes papers
 
 * References are descriptive links to the item in the reference section.
 * External references are available via hyperlink for easy access.
-* The Reference section summarizes the references to more easily understand key takeaways.
+* The Reference section summarizes the references key takeaways.
 
 ## Aspects
 
@@ -153,6 +153,7 @@ The purpose of API structure is to provide the concrete blocks of interaction th
 
 * Choose one method of error handling. Avoid mixing error handling structures: return codes, exceptions etc..
 * Strong Types
+* Avoid overloading operators with operations that are not mainstream on those object types.
 
 ### Documentation
 
