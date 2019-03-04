@@ -146,14 +146,17 @@ The purpose of API structure is to provide the concrete blocks of interaction th
 #### Structure Principals
 
 * Having the same structure represent the same concept is easier to understand and remember.
-* d
+
 
 
 #### Structure Patterns
 
+* Choose one method of error handling. Avoid mixing error handling structures: return codes, exceptions etc..
 * Strong Types
 
 ### Documentation
+
+Documentation explains to the user how to effectively interact with the API. Documentation can 
 
 Making sure it works well and is accessible from a development environment
 
@@ -168,6 +171,8 @@ Documentation can exist on multiple levels:
 * Interactions between APIs
 
 #### Documentation Purpose
+
+The purpose of documentation is to explain how to effectively interact with the API.
 
 #### Documentation Principals
 
