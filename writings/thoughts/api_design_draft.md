@@ -20,10 +20,9 @@ What is accessible knowledge?
 
 > Knowledge that is accessible is discoverable and usable by others with minimal effort.
 
-What are some API accessibility principals to consider when developing an API?
-
 What is a reasonable process to follow to develop an API?
 
+What are some considerations when developing an API?
 
 > This paper will attempt to answer that question.
 
@@ -38,7 +37,7 @@ Assume Functionality already exists
 
 ## Paper Structure
 
-An Application Programming Interface (API) is a way to access functionality. One consideration of accessing functionality is ease of use: being able to quickly discover, understand, and apply the provided functionality. This paper will examine considerations for designing an API with ease of use in mind.
+An Application Programming Interface (API) is ultimately a way to access functionality. One consideration of accessing functionality is ease of use: being able to quickly discover, understand, and apply the provided functionality. This paper will examine considerations for designing an API with ease of use in mind.
 
 This paper will look at ease of use in four API aspects:
 
@@ -51,6 +50,7 @@ Each API aspect will explore its __purpose__, __principals__, and __patterns__ r
 
 * __purpose__ is what it can contribute towards ease of use.
 * __principals__ are intended to give high level direction towards design considerations.
+* __patterns__ are derived from principals and are intended to give specific design guidance.
 
 The end of the paper is a [reference section](#reference) that summarizes papers that pertain to ease of use.
 
@@ -94,6 +94,14 @@ In general it's better if the __Mental Model__ and __Technical Model__ are alrea
 
 Simpler is generally easier to understand, making the __Mental Model__ and __Technical Model__ have as few steps or pieces as possible will generally make it easier to grasp.
 
+#### Model Patterns
+
+* Choose or build off a well known model when possible.
+
+Example:
+
+JSON and XML are well known data interchange formats, it's much easier to use these __Technical Models__ than to attempt to create and explain a new format.
+
 
 ### Behavior
 
@@ -105,21 +113,27 @@ What can it do and what should it be allowed to do?
 
 The purpose of an APIs behavior is to accomplish its assigned task and provide feedback on that tasks status and the current state of the model.
 
-The APIs behavior is a description of what it should do (the positive space) and what it should __not__ do (the negative space).
-
 #### Behavior Principals
 
-Prefer the positive space. The positive space is what the API should do, the API should only do what is described and nothing more.
-The negative space of what an API should __not__ do is infinite, the positive space is constrained to what is described.
+* Succinctly explainable behavior is desirable.
+* Having a single function call accomplish one explainable behavior is easier to explain.
+* Special cases add complexity and can be harder to explain.
+* Understanding the current state of the model is generally helpful.
 
-When describing behavior prefer succinct explainable behavior. Every additional special case or feature adds to mental overhead which makes things harder to understand.
+#### Behavior Patterns
 
-Error handling is part of an APIs behavior. Make sure to describe what happens in an error case.
+* Simple behavior
 
-Have one model for error handling, avoid mixing patterns. Error cases are generally an afterthought when writing code. Having a single way of handling errors makes this easier on developers.
+* Clear error handling and patterns, avoid mixing patterns
 
-Prefer allowing the behavior to understand the current state of the system after an action occurs when possible. This allows the API user to experiment with the system.
+* HRESULTS
+* exceptions
+* global error
+* ignor error
+* boolean
 
+Can understand the current state of the system
+Some action was taken, what is the current status of that action? Can I see the current status of the model? Can I roll back that change? These help the use play around with the API when learning
 
 ### Structure
 
@@ -133,6 +147,9 @@ The purpose of API structure is to provide the concrete blocks of interaction th
 
 * Having the same structure represent the same concept is easier to understand and remember.
 
+
+
+#### Structure Patterns
 
 * Choose one method of error handling. Avoid mixing error handling structures: return codes, exceptions etc..
 * Strong Types
@@ -160,6 +177,8 @@ The purpose of documentation is to explain how to effectively interact with the 
 
 #### Documentation Principals
 
+#### Documentation Patterns
+
 * Paradigm Documentation
 * Examples
 * Applications
@@ -180,18 +199,20 @@ How is the knowledge to be communicated defined?
 
 ### Teaching
 
-#### McKeachie's Teaching Tips
 [McKeachie's Teaching Tips: Strategies, Research, and Theory for College and University Teachers]: https://www.amazon.com/McKeachies-Teaching-Tips-Wilbert-McKeachie/dp/1133936792
-[McKeachie's Teaching Tips: Strategies, Research, and Theory for College and University Teachers][McKeachie's Teaching Tips: Strategies, Research, and Theory for College and University Teachers]
 
-### API Wikipedia
+
+
+### API Definition
 
 [API Wikipedia]: https://en.wikipedia.org/wiki/Application_programming_interface
-[Wikipedia: API][API Wikipedia]
+[API Wikipedia][API Wikipedia]
 
 ```text
 an application programming interface (API) is a set of subroutine definitions, communication protocols, and tools for building software. In general terms, it is a set of clearly defined methods of communication among various components. A good API makes it easier to develop a computer program by providing all the building blocks, which are then put together by the programmer.
 ```
+
+### API Importance
 
 #### API Design and Why it matters
 [API Design and Why it matters]: https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/32713.pdf "API Design and Why it matters"
@@ -206,27 +227,27 @@ an application programming interface (API) is a set of subroutine definitions, c
 [API Design Matters]: https://queue.acm.org/detail.cfm?id=1255422 "API Design Matters"
 [API Design Matters][API Design Matters]
 
-Why:
-
 * Poor APIs are difficult to program with and often require additional code to be written
 * poor APIs are harder to understand and more difficult to work with than good ones
 * Poor APIs often require not only extra code, but also more complex code that provides more places where bugs can hide
+
 * Poor APIs Increase the cost to develop software
     * Time to Understand
     * Time to Write
     * Time to test
     * Time to fix bugs
+
 * Poor APIs cost everyone time.
 
-#### The Little Manual of API Design
-
 [The Little Manual of API Design]: http://people.mpi-inf.mpg.de/~jblanche/api-design.pdf "The Little Manual of API Design"
-[Blanchette, Jasmin. "The little manual of API design." Trolltech, Nokia (2008).][The Little Manual of API Design]
+
+### API Solution
 
 #### The World and The Machine
-
 [The World and The Machine]: https://courses.cs.washington.edu/courses/csep503/19wi/schedule/papers/TheWorldAndTheMachine.pdf "The World and The Machine"
-[Jackson, Michael. "The world and the machine." 1995 17th International Conference on Software Engineering. IEEE, 1995.][The World and The Machine]
+[The World and The Machine][The World and The Machine]
+
+### API Usability
 
 #### Measuring API Usability
 [Measuring API Usability]: http://www.drdobbs.com/windows/measuring-api-usability/184405654 "Measuring API Usability"
@@ -237,7 +258,7 @@ Why:
 
 #### What makes APIs Hard to learn
 [What makes APIs Hard to learn? Answers from Developers]: https://www.cs.mcgill.ca/~martin/papers/software2009a.pdf "What makes APIs Hard to learn? Answers from Developers"
-[Robillard, Martin P. "What makes APIs hard to learn? Answers from developers." IEEE software 26.6 (2009): 27-34.][What makes APIs Hard to learn? Answers from Developers]
+[What makes APIs Hard to learn? Answers from Developers][What makes APIs Hard to learn? Answers from Developers]
 
 * APIs Structure
 * API learning resources - most important for learning an API
@@ -262,15 +283,15 @@ Why:
 #### An Empirical Study of API Usability
 
 [An Empirical Study of API Usability]: https://bugcounting.net/pubs/esem13.pdf "An Empirical Study of API Usability"
-[Piccioni, Marco, Carlo A. Furia, and Bertrand Meyer. "An empirical study of API usability." 2013 ACM/IEEE International Symposium on Empirical Software Engineering and Measurement. IEEE, 2013.][An Empirical Study of API Usability]
+[An Empirical Study of API Usability][An Empirical Study of API Usability]
 
 #### Intelligent Code Completion
 [Intelligent Code Completion]: https://en.wikipedia.org/wiki/Intelligent_code_completion
-[Wikipedia: Intelligent Code Completion][Intelligent Code Completion]
+[Intelligent Code Completion][Intelligent Code Completion]
 
 #### The Design of Everyday Things by Don Norman
 [The Design of Everyday Things by Don Norman]: http://www.nixdell.com/classes/HCI-and-Design-Spring-2017/The-Design-of-Everyday-Things-Revised-and-Expanded-Edition.pdf "The Design of Everyday Things by Don Norman"
-[Norman, Don. The design of everyday things: Revised and expanded edition. Basic books, 2013.][The Design of Everyday Things by Don Norman]
+[The Design of Everyday Things by Don Norman][The Design of Everyday Things by Don Norman]
 
 * The idea of a mental model distinct from the underlying technical
 
@@ -278,7 +299,7 @@ Why:
 
 
 [Instruction Set Architectures]: https://en.wikipedia.org/wiki/Instruction_set_architecture "Instruction Set Architectures"
-[Wikipedia: Instruction Set Architectures][Instruction Set Architectures]
+[Instruction Set Architectures][Instruction Set Architectures]
 
 * communicate with the CPU
 * often have very specific behaviors and complex interactions
@@ -286,17 +307,17 @@ Why:
 
 #### Hypertext Transfer Protocol
 [Hypertext Transfer Protocol]: https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol "Hypertext Transfer Protocol"
-[Wikipedia: Hypertext Transfer Protocol][Hypertext Transfer Protocol]
+[Hypertext Transfer Protocol][Hypertext Transfer Protocol]
 
 #### Relational Model
 [A Relation Model of Data form Large Shared Data Banks]: https://www.seas.upenn.edu/~zives/03f/cis550/codd.pdf "A Relation Model of Data form Large Shared Data Banks - E. F. Codd"
-[Codd, Edgar F. "A relational model of data for large shared data banks." Communications of the ACM 13.6 (1970): 377-387.][A Relation Model of Data form Large Shared Data Banks]
+[A Relation Model of Data form Large Shared Data Banks][A Relation Model of Data form Large Shared Data Banks]
 
-* Presents a Model of Relational Algebra for use in querying a database.
+* Presents a Technical Model of Relational Algebra for use in querying a database.
 
 #### An Introduction to Software Architecture
 [An Introduction to Software Architecture]: https://courses.cs.washington.edu/courses/csep503/19wi/schedule/papers/IntroSA.pdf "An Introduction to Software Architecture"
-[Garlan, David, and Mary Shaw. "An introduction to software architecture." Advances in software engineering and knowledge engineering. 1993. 1-39.][An Introduction to Software Architecture]
+[An Introduction to Software Architecture][An Introduction to Software Architecture]
 
 ```text
 it is important to be able to recognize common paradigms so that high-level relationships among systems can be understood
@@ -344,16 +365,11 @@ Philosophy
 * use supporting tools as appropriate
 
 #### JavaScript Style Guide and Coding Conventions
-
 [JavaScript Style Guide and Coding Conventions]: https://www.w3schools.com/js/js_conventions.asp "JavaScript Style Guide and Coding Conventions"
 [JavaScript Style Guide and Coding Conventions][JavaScript Style Guide and Coding Conventions]
 
-Why?
-
 * improves code readability
 * improve maintenance
-
-Suggestions:
 
 * variable names
 * spaces
@@ -364,28 +380,25 @@ Suggestions:
 * be aware of defaults
 
 
-#### Software Testing: A Research Travelogue (2000–2014)
+### API Behavior
 
 [Software Testing: A Research Travelogue (2000–2014)]: https://courses.cs.washington.edu/courses/csep503/19wi/schedule/papers/SoftwareTestingTravelogue.pdf "Software Testing: A Research Travelogue (2000–2014)"
-[Orso, Alessandro, and Gregg Rothermel. "Software testing: a research travelogue (2000–2014)." Proceedings of the on Future of Software Engineering. ACM, 2014.][Software Testing: A Research Travelogue (2000–2014)]
-
-#### An Overview of Formal Methods Tools and Techniques
+[Software Testing: A Research Travelogue (2000–2014)][Software Testing: A Research Travelogue (2000–2014)]
 
 [An Overview of Formal Methods Tools and Techniques]: https://courses.cs.washington.edu/courses/csep503/19wi/schedule/papers/AnOverviewOfFormalMethodsToolsAndTechniques.pdf "An Overview of Formal Methods Tools and Techniques"
 [An Overview of Formal Methods Tools and Techniques][An Overview of Formal Methods Tools and Techniques]
 
-#### API Design Reviews at Scale
+### API Review
 
 [API Design Reviews at Scale]: https://storage.googleapis.com/pub-tools-public-publication-data/pdf/45294.pdf "API Design Reviews at Scale"
-[Macvean, Andrew, Martin Maly, and John Daughtry. "API design reviews at scale." Proceedings of the 2016 CHI Conference Extended Abstracts on Human Factors in Computing Systems. ACM, 2016.][API Design Reviews at Scale]
+[API Design Reviews at Scale][API Design Reviews at Scale]
 
 
-#### How to write a technical paper
+### Other
 
 [How to write a technical paper]: https://homes.cs.washington.edu/~mernst/advice/write-technical-paper.html "How to write a technical paper"
 [How to write a technical paper][How to write a technical paper]
 
-#### Robust De-anonymization of Large Datasets
 [Robust De-anonymization of Large Datasets]:https://courses.cs.washington.edu/courses/csep503/19wi/schedule/papers/deanonymization.pdf "Robust De-anonymization of Large Datasets"
-[Narayanan, Arvind, and Vitaly Shmatikov. "Robust de-anonymization of large sparse datasets." 2008 ieee symposium on security and privacy. IEEE, 2008.][Robust De-anonymization of Large Datasets]
+[Robust De-anonymization of Large Datasets][Robust De-anonymization of Large Datasets]
 
