@@ -39,14 +39,27 @@ Each API aspect will explore its __Purpose__, and three related __Principals__:
 The API Aspects and explored principals are:
 
 * Model
-    * Reduce
-    * Reuse
-    * Recycle
+    * Reduce complexity
+    * Reuse existing models
+    * Recycle 
 * Behavior
+    * positive
+    * predictable
+    * concise
+    * conventional
+    * consistent
 * Structure
+    * form follows function 
+    * constrain - strong types
+    * names
+    * parameters
 * Documentation
+    * Projects
+    * IntelliSense
+    * Examples
 
-
+consistent
+constrained
 
 The end of the paper is a [reference section](#reference) that summarizes papers that sparked this one.
 
@@ -303,6 +316,29 @@ Why:
 
 [An Empirical Study of API Usability]: https://bugcounting.net/pubs/esem13.pdf "An Empirical Study of API Usability"
 [Piccioni, Marco, Carlo A. Furia, and Bertrand Meyer. "An empirical study of API usability." 2013 ACM/IEEE International Symposium on Empirical Software Engineering and Measurement. IEEE, 2013.][An Empirical Study of API Usability]
+
+> usable  APIs are  more  intuitive,  require  less  documentation  browsing,  and encourage reuse, thus increasing developers’ productivity
+
+> cognitive dimensions: elements that characterize the expectations of users and what an API actually provides
+
+
+> Finding descriptive, non-ambiguous names for API features is problematic given that programmers may be used to different terminologies.
+
+> Discovering relations between API types (classes)  requires significant effort; simple designs are  beneficial,especially to less experienced programmers.
+
+> Accurate and complete documentation is a crucial issue for API usability; all the major usability flaws discovered in our study trace back to unsatisfactory documentation.
+
+> Flexibility is a double-edged sword in API design: experienced programmers can take advantage of it, but it may confuse those with less practice
+
+usability tokens - tokens are negatives in the API design
+
+* surprise - api performs in a way that is not as the developer expected
+* choice - requires understanding options slowing implementation
+* missed - feature was there to aid implementation but developer did not see it
+* incorrect - developer uses API incorrectly
+* unexpected - API used in way not designed for
+
+
 
 ### Intelligent Code Completion
 [Intelligent Code Completion]: https://en.wikipedia.org/wiki/Intelligent_code_completion
