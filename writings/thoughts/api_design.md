@@ -37,7 +37,7 @@ Assume Functionality already exists
 
 ## Paper Structure
 
-An Application Programming Interface (API) is ultimately a way to access functionality. One consideration of accessing functionality is ease of use: being able to quickly discover, understand, and apply the provided functionality. This paper will examine considerations for designing an API with ease of use in mind.
+An Application Programming Interface (API) is  a way to access functionality. One consideration of accessing functionality is ease of use: being able to quickly discover, understand, and apply the provided functionality. This paper will examine considerations for designing an API with ease of use in mind.
 
 This paper will look at ease of use in four API aspects:
 
@@ -64,14 +64,14 @@ The end of the paper is a [reference section](#reference) that summarizes papers
 
 ### Model
 
-The model of an API is it's underlying paradigm. The model consists of both a __technical model__ and __mental model__. T
+The model of an API is it's underlying paradigm. The model consists of both a __Technical Model__ and __Mental Model__. T
 
 The __Technical Model__ is how the API is implemented and imposes constraints on design. In general the __Technical Model__ is usually a well known paradigm.
 
 Some well known __Technical Models__ include:
 
 * [Instruction Set Architectures](#Instruction-Set-Architectures) such as x86, AMD64, and ARM
-* [Relational Model](#Relational-Algebra-Model) that backs most modern databases.
+* [Relational Model](#Relational-Algebra-Model) that backs many modern databases.
 * [Hypertext Transfer Protocol](#Hypertext-Transfer-Protocol)
 * Language Models: C, C++, JavaScript, TypeScript, Block programming etc...
     * Languages generally provide specific means to accomplish various programming tasks and generally come with a standard set of conventions.
