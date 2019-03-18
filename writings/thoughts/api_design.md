@@ -1,5 +1,7 @@
 # API Design Accessibility Principals
 
+by wandyezj
+
 ## Abstract
 
 What is an Application Programming Interface (API)?
@@ -31,35 +33,27 @@ This paper will look at ease of use in four API aspects:
 * [Structure](#structure), and,
 * [Documentation](#documentation).
 
-Each API aspect will explore its __Purpose__, and three related __Principals__:
+Each API aspect will describe itself, then explore its __Purpose__, and two related __Principals__:
 
 * __Purpose__ is what role the API aspect serves in design,
 * __Principals__ are high level direction towards accessible design considerations.
 
 The API Aspects and explored principals are:
 
-* Model
-    * Reduce complexity
-    * Reuse existing models
-    * Recycle 
-* Behavior
-    * positive
-    * predictable
-    * concise
-    * conventional
-    * consistent
-* Structure
-    * form follows function 
-    * constrain - strong types
-    * names
-    * parameters
-* Documentation
-    * Projects
-    * IntelliSense
-    * Examples
+* [Model](#model)
+    * [Reuse existing](#reuse-existing)
+    * [Minimal](#minimal)
+* [Behavior](#behavior)
+    * [positive](#postive)
+    * [concise](#concise)
+* [Structure](#structure)
+    * [form follows function](#form-follows-function)
+    * [constrain use](#constrain-use)
+* [Documentation](#documentation)
+    * [explain concepts](#explain-concepts)
+    * [show intent](#show-intent)
 
-consistent
-constrained
+The paper concludes with a summary of the principals and thoughts on what would be a reasonable process to follow when developing an accessible API.
 
 The end of the paper is a [reference section](#reference) that summarizes papers that sparked this one.
 
@@ -101,14 +95,13 @@ Together the __Technical Model__ and __Mental Model__ provide the platform on wh
 
 #### Model Principals
 
-* Prefer Recycling existing Models when possible.
-* Prefer simpler models.
-* Prefer declarative over imperative. What over How
+##### Reuse Existing
 
-In general it's better if the __Mental Model__ and __Technical Model__ are already known to users as this significantly reduces the amount of learning a user needs to to to be able to use the API. If using an existing model it's best to follow the model as closely as possible since any deviation can surprise users and lead to mistakes in code.
+Employing an already known __Mental Model__ and __Technical Model__  significantly reduces the amount of learning required to be able to use the API. When using an existing model it's best to follow the model as closely as possible since any deviation can surprise users and lead to mistakes in code.
 
-Simpler is generally easier to understand, making the __Mental Model__ and __Technical Model__ have as few steps or pieces as possible will generally make it easier to grasp.
+##### Minimal
 
+Fewer concepts generally takes less time to understand. Employing a __Mental Model__ and __Technical Model__ have as few steps or pieces as possible will generally make it easier to grasp.
 
 ### Behavior
 
@@ -124,21 +117,19 @@ The APIs behavior is a description of what it should do (the positive descriptio
 
 #### Behavior Principals
 
-* Positive description
-* succinctly explainable
-* 
+##### Positive
 
-Prefer the positive description. The positive description is what the API should do, the API should only do what is described and nothing more.
-The negative description of what an API should __not__ do is infinite, the positive description is constrained to what is described.
+The positive description is what the API should do, the API should only do what is described and nothing more.
 
-When describing behavior prefer succinct explainable behavior. Every additional special case or feature adds to mental overhead which makes things harder to understand.
+The negative description of what an API should __not__ do is infinite. the positive description is constrained to what is described.
 
-Error handling is part of an APIs behavior. Make sure to describe what happens in an error case.
+Using the positive descriptions for an APIs behavior is more descriptive than the negative description.
 
-Have one model for error handling, avoid mixing patterns. Error cases are generally an afterthought when writing code. Having a single way of handling errors makes this easier on developers.
+Positive descriptions easier to understand than a combination of positive and negative descriptions.
 
-Prefer allowing the behavior to understand the current state of the system after an action occurs when possible. This allows the API user to experiment with the system.
+##### Concise
 
+Succinct explainable behavior is easier to understand than more complex behavior.Every additional special case or feature adds to mental overhead which makes things harder to understand.
 
 ### Structure
 
@@ -146,23 +137,37 @@ The structure of an API is the interface for interaction. The structure is based
 
 #### Structure Purpose
 
-The purpose of API structure is to provide the concrete blocks of interaction the user can access. The structure contributes towards representing allowed behavior and shaping the users __Mental Model__ of the API. The structure also contributes towards the readability of the final sequence of interaction blocks.
+The purpose of API structure is to provide the concrete blocks of interaction the user can access. The structure contributes towards: representing allowed behavior, shaping the users __Mental Model__ of the API, and the readability of the final sequence of interaction blocks.
 
 #### Structure Principals
 
-* Prefer strongly types structures
-* Prefer one method of error handling
+##### Form Follow Function
 
-* Having the same structure represent the same concept is easier to understand and remember.
+The form of the API should represent it's function. Having the same structure represent the same concept is easier to understand and remember.
 
+Having the form of the API: names, types, functions, and parameters describe the behavior encapsulated makes it easier for developers to identify the correct API to use.  
 
-* Choose one method of error handling. Avoid mixing error handling structures: return codes, exceptions etc..
-* Strong Types
-* Avoid overloading operators with operations that are not mainstream on those object types.
+##### Constrain use
+
+The structure should constrain the use of the API to make correct usage of the API easy and wrong usage of the API hard. Similarly the intended use of the API should look correct and unintended use should look incorrect.
+
 
 ### Documentation
 
-Documentation explains to the user how to effectively interact with the API. Documentation can 
+Documentation explains to the user how to effectively interact with the API.
+
+Documentation generally:
+
+* explains the __Technical Model__ employed,
+* describes the __Mental Model__ the API represents,
+* provides examples of correct usage, and
+* catalogues available functionality.
+
+Documentation also
+
+
+
+Documentation can 
 
 Making sure it works well and is accessible from a development environment
 
@@ -181,6 +186,10 @@ Documentation can exist on multiple levels:
 The purpose of documentation is to explain how to effectively interact with the API.
 
 #### Documentation Principals
+
+## Explain Concepts
+
+## Show Intent
 
 * Paradigm Documentation
 * Examples
