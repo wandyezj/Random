@@ -189,7 +189,12 @@ The purpose of documentation is to explain how to effectively interact with the 
 
 ## Explain Concepts
 
+Documentation can be used to explain the concepts required to use the API.
+
+
 ## Show Intent
+
+Documentation can 
 
 * Paradigm Documentation
 * Examples
