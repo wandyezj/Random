@@ -133,7 +133,7 @@ Positive descriptions easier to understand than a combination of positive and ne
 
 ##### Concise
 
-Succinct explainable behavior is easier to understand than more complex behavior.Every additional special case or feature adds to mental overhead which makes things harder to understand.
+Succinct explainable behavior is easier to understand than more complex behavior. Every additional special case or feature adds to mental overhead which makes things harder to understand.
 
 ### Structure
 
@@ -151,10 +151,7 @@ The form of the API should represent it's function. Having the same structure re
 
 Having the form of the API: names, types, functions, and parameters describe the behavior encapsulated makes it easier for developers to identify the correct API to use.
 
-
-
-
-##### Constrain use
+##### Constrain Use
 
 The structure should constrain the use of the API to make correct usage of the API easy and wrong usage of the API hard. Similarly the intended use of the API should look correct and unintended use should look incorrect.
 
@@ -181,19 +178,21 @@ The purpose of documentation is to explain how to effectively interact with the 
 
 ##### Explain Concepts
 
-Documentation can be used to explain the concepts required to use the API.
+Documentation can be used to explain the concepts required to use the API. Understanding the high level concepts of the API can help others use the API more effectively.
+
+Understanding "overall architecture" was cited as key need for developers to deo more than beyond the basics in [What Makes APIs Hard to Learn](#what-makes-apis-hard-to-learn).
 
 ##### Show Intent
 
-Documentation can show intent by providing examples for the audience to follow.
+Having documentation show intent, for example by providing examples of intended use, allows consumers of the API to model and constrain their usage to the intended uses.
+
+
 
 ## Conclusion
 
-The four aspects explored: Model, Behavior, Structure, and Documentation can all contribute towards making an API accessible.
+The four aspects explored: Model, Behavior, Structure, and Documentation can all work together to facilitate API accessibility.
 
-The core task of making an API accessible is to project the model of the API to the audience.
-
-Following the principals outlined for each concept can help project the desired model and make new APIs more accessible.
+Following the principals outlined for each concept can help project the desired model from the head of the author to that of the user and make an API more accessible.
 
 * [Model](#model)
     * [Employ Existing](#reuse-existing)
@@ -343,7 +342,7 @@ Why:
 
 > Finding descriptive, non-ambiguous names for API features is problematic given that programmers may be used to different terminologies.
 
-> Discovering relations between API types (classes)  requires significant effort; simple designs are  beneficial,especially to less experienced programmers.
+> Discovering relations between API types (classes)  requires significant effort; simple designs are beneficial, especially to less experienced programmers.
 
 > Accurate and complete documentation is a crucial issue for API usability; all the major usability flaws discovered in our study trace back to unsatisfactory documentation.
 
@@ -391,7 +390,7 @@ usability tokens - tokens are negatives in the API design
 [Wikipedia: Hypertext Transfer Protocol][Hypertext Transfer Protocol]
 
 * Request Response protocol
-* Contains status information about the request in the response 
+* Contains status information about the request in the response
 
 ### Relational Model
 
