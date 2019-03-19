@@ -1,6 +1,10 @@
 # API Design Accessibility Principals
 
-by wandyezj
+name:
+
+email:
+
+[View on GitHub](https://github.com/wandyezj/Random/blob/master/writings/thoughts/api_design.md)
 
 ## Abstract
 
@@ -26,7 +30,7 @@ What is accessible knowledge?
 
 An Application Programming Interface (API) is a way to access functionality. One consideration of accessing functionality is ease of use: being able to quickly discover, understand, and apply the provided functionality. This paper will examine considerations for designing an accessible API.
 
-This paper will look at ease of use in four API aspects:
+This paper will examine accessibility principals in four API aspects:
 
 * [Model](#model),
 * [Behavior](#behavior),
@@ -53,9 +57,9 @@ The API Aspects and explored principals are:
     * [explain concepts](#explain-concepts)
     * [show intent](#show-intent)
 
-The paper concludes with a summary of the principals and thoughts on what would be a reasonable process to follow when developing an accessible API.
+The paper concludes with a summary of the principals.
 
-The end of the paper is a [reference section](#reference) that summarizes papers that sparked this one.
+The end of the paper is a [reference section](#reference) that summarizes references that sparked this one.
 
 ### References
 
@@ -71,7 +75,7 @@ References have:
 
 The model of an API is it's underlying paradigm. The model consists of both a __Technical Model__ and __Mental Model__.
 
-The __Technical Model__ is how the API is implemented and imposes constraints on design. In general the __Technical Model__ is usually a well known paradigm.
+The __Technical Model__ is how the API is implemented and imposes constraints on design.
 
 Some well known __Technical Models__ include:
 
@@ -145,12 +149,16 @@ The purpose of API structure is to provide the concrete blocks of interaction th
 
 The form of the API should represent it's function. Having the same structure represent the same concept is easier to understand and remember.
 
-Having the form of the API: names, types, functions, and parameters describe the behavior encapsulated makes it easier for developers to identify the correct API to use.  
+Having the form of the API: names, types, functions, and parameters describe the behavior encapsulated makes it easier for developers to identify the correct API to use.
+
+
+
 
 ##### Constrain use
 
 The structure should constrain the use of the API to make correct usage of the API easy and wrong usage of the API hard. Similarly the intended use of the API should look correct and unintended use should look incorrect.
 
+See [The Little Manual of APi Design](#the-little-manual-of-api-design) principal of "hard to misuse".
 
 ### Documentation
 
@@ -163,53 +171,42 @@ Documentation generally:
 * provides examples of correct usage, and
 * catalogues available functionality.
 
-Documentation also
-
-
-
-Documentation can 
-
-Making sure it works well and is accessible from a development environment
-
-How the programmer types out an action
-
-Documentation can exist on multiple levels:
-
-* Mental Model
-* Specific Calls
-* Parameters
-* Performance Limitations
-* Interactions between APIs
+Note: Available functionality can include API behavior limitations (such as performance) that are not captured by the structure.
 
 #### Documentation Purpose
 
-The purpose of documentation is to explain how to effectively interact with the API.
+The purpose of documentation is to explain how to effectively interact with the API at both a higher and finer level.
 
 #### Documentation Principals
 
-## Explain Concepts
+##### Explain Concepts
 
 Documentation can be used to explain the concepts required to use the API.
 
+##### Show Intent
 
-## Show Intent
-
-Documentation can 
-
-* Paradigm Documentation
-* Examples
-* Applications
-* Tutorials
+Documentation can show intent by providing examples for the audience to follow.
 
 ## Conclusion
 
-* keep it simple
-* keep it known
-* keep it explainable
+The four aspects explored: Model, Behavior, Structure, and Documentation all have a role to play in making an API accessible.
 
-## Content
+The core task of making an API accessible is to project the model of the API to the Audience.
 
-How is the knowledge to be communicated defined?
+Following the principals outlined for each concept can help project the desired model and make new APIs more accessible.
+
+* [Model](#model)
+    * [Reuse existing](#reuse-existing)
+    * [Minimal](#minimal)
+* [Behavior](#behavior)
+    * [positive](#postive)
+    * [concise](#concise)
+* [Structure](#structure)
+    * [form follows function](#form-follows-function)
+    * [constrain use](#constrain-use)
+* [Documentation](#documentation)
+    * [explain concepts](#explain-concepts)
+    * [show intent](#show-intent)
 
 
 ## Reference
@@ -346,13 +343,11 @@ Why:
 
 usability tokens - tokens are negatives in the API design
 
-* surprise - api performs in a way that is not as the developer expected
+* surprise - API performs in a way that is not as the developer expected
 * choice - requires understanding options slowing implementation
 * missed - feature was there to aid implementation but developer did not see it
 * incorrect - developer uses API incorrectly
 * unexpected - API used in way not designed for
-
-
 
 ### Intelligent Code Completion
 [Intelligent Code Completion]: https://en.wikipedia.org/wiki/Intelligent_code_completion
@@ -399,7 +394,7 @@ usability tokens - tokens are negatives in the API design
 * Knowledge is becoming increasing specialized and detailed, how can this knowledge be shared?
 * Machines can store this knowledge for us to be assessed by anyone
 
-* The API can be thought of as any access to functionality
+* The API can be thought of as an access to functionality
 
 ### An Introduction to Software Architecture
 [An Introduction to Software Architecture]: https://courses.cs.washington.edu/courses/csep503/19wi/schedule/papers/IntroSA.pdf "An Introduction to Software Architecture"
@@ -496,6 +491,7 @@ Suggestions:
 > The goal of writing a paper is to change people's behavior
 
 Naming
+
 > It is better to name a technique (or a paper section, etc.) based on what it does rather than how it does it
 
 > Use terms consistently and precisely.
