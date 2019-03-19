@@ -1,4 +1,4 @@
-# API Design Accessibility Principals
+# API Design Accessibility Principles
 
 name:
 
@@ -30,19 +30,19 @@ What is accessible knowledge?
 
 An Application Programming Interface (API) is a way to access functionality. One consideration of accessing functionality is ease of use: being able to quickly discover, understand, and apply the provided functionality. This paper will examine considerations for designing an accessible API.
 
-This paper will examine accessibility principals in four API aspects:
+This paper will examine accessibility Principles in four API aspects:
 
 * [Model](#model),
 * [Behavior](#behavior),
 * [Structure](#structure), and,
 * [Documentation](#documentation).
 
-Each API aspect will describe itself, then explore its __Purpose__, and two related __Principals__:
+Each API aspect will describe itself, then explore its __Purpose__, and two related __Principles__:
 
 * __Purpose__ is what role the API aspect serves in design,
-* __Principals__ are high level direction towards accessible design considerations.
+* __Principles__ are high level direction towards accessible design considerations.
 
-The API Aspects and explored principals are:
+The API Aspects and explored Principles are:
 
 * [Model](#model)
     * [Employ Existing](#employ-existing)
@@ -57,9 +57,7 @@ The API Aspects and explored principals are:
     * [Explain Concepts](#explain-concepts)
     * [Show Intent](#show-intent)
 
-The paper concludes with a summary of the principals.
-
-The end of the paper is a [reference section](#reference) that summarizes references that helped spark this paper.
+The paper concludes with a summary of the Principles and a [reference section](#reference) which inspired this topic.
 
 ### References
 
@@ -73,7 +71,7 @@ References have:
 
 ### Model
 
-The model of an API is it's underlying paradigm. The model consists of both a __Technical Model__ and __Mental Model__.
+The model of an API is its underlying paradigm. The model consists of both a __Technical Model__ and __Mental Model__.
 
 The __Technical Model__ is how the API is implemented and imposes constraints on design.
 
@@ -87,7 +85,7 @@ Some well known __Technical Models__ include:
 
 The __Technical Model__ provides the foundation for which an API is based and comes with a certain set of expectations about how features in the model are used.
 
-The __Mental Model__ is the users map of what that API represent and how that API pieces fit together to accomplish tasks. See [The Design of Everyday Things by Don Norman](#The-Design-of-Everyday-Things-by-Don-Norman) chapter 1 for a good explanation of mental models.
+The __Mental Model__ is the user's map of what API represents, and how the API pieces fit together to accomplish tasks. See [The Design of Everyday Things by Don Norman](#The-Design-of-Everyday-Things-by-Don-Norman) chapter 1 for a good explanation of mental models.
 
 #### Model Purpose
 
@@ -97,7 +95,7 @@ The purpose of the __Mental Model__ is to provide an overall model for what the 
 
 Together the __Technical Model__ and __Mental Model__ provide the platform on which to build the API.
 
-#### Model Principals
+#### Model Principles
 
 ##### Employ Existing
 
@@ -115,21 +113,21 @@ What can it do and what should it be allowed to do?
 
 #### Behavior Purpose
 
-The purpose of an APIs behavior is to accomplish its assigned task and provide feedback on that tasks status and the current state of the model.
+The purpose of an API's behavior is to accomplish its assigned task and provide feedback on that task's status and the current state of the model.
 
-The APIs behavior is a description of what it should do (the positive description) and what it should __not__ do (the negative description).
+The API's behavior is a description of what it __should__ do (the positive description) and what it should __not__ do (the negative description).
 
-#### Behavior Principals
+#### Behavior Principles
 
 ##### Positive
 
-The positive description is what the API should do, the API should only do what is described and nothing more.
+The positive description is what the API should do. The API should only do what is described and nothing more.
 
-The negative description of what an API should __not__ do is infinite. the positive description is constrained to what is described.
+The negative description of what an API should __not__ do is infinite. The positive description is constrained to what is described.
 
-Using the positive descriptions for an APIs behavior is more descriptive than the negative description.
+Using the positive descriptions for an API's behavior is more descriptive than the negative description.
 
-Positive descriptions easier to understand than a combination of positive and negative descriptions.
+Positive descriptions are easier to understand than a combination of positive and negative descriptions.
 
 ##### Concise
 
@@ -137,25 +135,25 @@ Succinct explainable behavior is easier to understand than more complex behavior
 
 ### Structure
 
-The structure of an API is the interface for interaction. The structure is based in the __Technical Model__ and can help shape the desired __Mental Model__ for the user. The structure is usually made of the methods, classes, and interfaces available to the user but the specifics are dependent on the __Technical Model__.
+The structure of an API is the interface for interaction. The structure is based in the __Technical Model__ and can help shape the desired __Mental Model__ for the user. The structure specifics are dependent on the __Technical Model__, but usually consists of the methods, classes, and interfaces available to the user.
 
 #### Structure Purpose
 
-The purpose of API structure is to provide the concrete blocks of interaction the user can access. The structure contributes towards: representing allowed behavior, shaping the users __Mental Model__ of the API, and the readability of the final sequence of interaction blocks.
+The purpose of API structure is to provide the concrete blocks of interaction the user can access. The structure suggests allowed behavior, shapes the user's __Mental Model__ of the API, and enhances the readability of the final sequence of interaction blocks.
 
-#### Structure Principals
+#### Structure Principles
 
-##### Form Follow Function
+##### Form Follows Function
 
-The form of the API should represent it's function. Having the same structure represent the same concept is easier to understand and remember.
+The form of the API should represent its function. Having the same structure represent the same concept is easier to understand and remember.
 
-Having the form of the API: names, types, functions, and parameters describe the behavior encapsulated makes it easier for developers to identify the correct API to use.
+Making the elements of the API (i.e. names, types, functions, and parameters) describe the encapsulated behavior helps developers identify the correct API to use. For example, a function that performs a matrix transpose is better called `matrix_transpose()`, and not `foo()`.
 
 ##### Constrain Use
 
-The structure should constrain the use of the API to make correct usage of the API easy and wrong usage of the API hard. Similarly the intended use of the API should look correct and unintended use should look incorrect.
+The structure should constrain the use of the API to make correct usage of the API easy and wrong usage of the API hard. Similarly, the intended use of the API should look correct and unintended use should look incorrect.
 
-See [The Little Manual of APi Design](#the-little-manual-of-api-design) principal of "hard to misuse".
+See [The Little Manual of API Design](#the-little-manual-of-api-design) Principle of "hard to misuse".
 
 ### Documentation
 
@@ -174,13 +172,13 @@ Note: Available functionality can include API behavior limitations (such as perf
 
 The purpose of documentation is to explain how to effectively interact with the API at both a higher and finer level.
 
-#### Documentation Principals
+#### Documentation Principles
 
 ##### Explain Concepts
 
-Documentation can be used to explain the concepts required to use the API. Understanding the high level concepts of the API can help others use the API more effectively.
+Documentation can be used to explain the concepts required to use the API. Understanding the high-level concepts of the API can help others use the API more effectively.
 
-Understanding "overall architecture" was cited as key need for developers to deo more than beyond the basics in [What Makes APIs Hard to Learn](#what-makes-apis-hard-to-learn).
+Understanding "overall architecture" was cited as key need for developers to do more than the basics in [What Makes APIs Hard to Learn](#what-makes-apis-hard-to-learn).
 
 ##### Show Intent
 
@@ -188,11 +186,12 @@ Having documentation show intent, for example by providing examples of intended 
 
 
 
+
 ## Conclusion
 
-The four aspects explored: Model, Behavior, Structure, and Documentation can all work together to facilitate API accessibility.
+Model, Behavior, Structure, and Documentation can all work together to facilitate API accessibility.
 
-Following the principals outlined for each concept can help project the desired model from the head of the author to that of the user and make an API more accessible.
+Following the principles outlined for each concept can help transfer the desired model from the head of the author to that of the user and make an API more accessible.
 
 * [Model](#model)
     * [Employ Existing](#reuse-existing)
@@ -292,7 +291,7 @@ Why:
 
 > Software development is engineering because it is concerned to make useful physical devices to serve practical purposes in the world.
 
-> The requirement — that is, the problem — is in the world; the machine is the solution we construct
+> The requirement — that is, the problem — is in the world. The machine is the solution we construct
 
 ### Measuring API Usability
 
@@ -300,7 +299,7 @@ Why:
 
 [Measuring API Usability][Measuring API Usability]
 
-* Scenario based approach
+* Scenario-based approach
 * Evaluate actual users attempting to accomplish tasks
 
 ### What makes APIs Hard to learn
@@ -315,7 +314,7 @@ Why:
     * Code Examples
     * Experimentation
     * Articles
-    "efforts to improve the us-ability of an API’s structure need to be complemented  by  efforts  to  improve  the  resources  available to learn them"
+    > efforts to improve the usability of an API’s structure need to be complemented by efforts to improve the resources available to learn them
 * API Documentation Must
     * include good examples
     * be complete
@@ -338,7 +337,6 @@ Why:
 > usable  APIs are  more  intuitive,  require  less  documentation  browsing,  and encourage reuse, thus increasing developers’ productivity
 
 > cognitive dimensions: elements that characterize the expectations of users and what an API actually provides
-
 
 > Finding descriptive, non-ambiguous names for API features is problematic given that programmers may be used to different terminologies.
 
