@@ -4,7 +4,7 @@ name:
 
 email:
 
-[View on GitHub](https://github.com/wandyezj/Random/blob/master/writings/thoughts/api_design.md)
+[For the best reading experience read on GitHub](https://github.com/wandyezj/Random/blob/master/writings/thoughts/api_design.md)
 
 ## Abstract
 
@@ -12,7 +12,7 @@ What is an Application Programming Interface (API)?
 
 > An API is "a set of clearly defined methods of communication among various components" per [Wikipedia's article on Application Programming Interface][API Wikipedia].
 
-> "An  API  is  the  interface  to  implemented  functionality  that  developers  can  access  to  perform various  tasks." per [What makes APIs Hard to learn? Answers from Developers][What makes APIs Hard to learn? Answers from Developers]
+> "An API is the interface to implemented functionality that developers can access to perform various tasks." per [What makes APIs Hard to learn? Answers from Developers][What makes APIs Hard to learn? Answers from Developers]
 
 What is the purpose of an API?
 
@@ -48,7 +48,7 @@ The API Aspects and explored Principles are:
     * [Employ Existing](#employ-existing)
     * [Minimal](#minimal)
 * [Behavior](#behavior)
-    * [Positive](#postive)
+    * [Positive](#positive)
     * [Concise](#concise)
 * [Structure](#structure)
     * [Form Follows Function](#form-follows-function)
@@ -57,15 +57,9 @@ The API Aspects and explored Principles are:
     * [Explain Concepts](#explain-concepts)
     * [Show Intent](#show-intent)
 
-The paper concludes with a summary of the Principles and a [reference section](#reference) which inspired this topic.
+The paper concludes with a summary of the principles and a [reference section](#reference) of material which guided this topic.
 
-### References
-
-References have:
-
-* descriptive links to the reference section,
-* hyperlinks for easy access, and
-* summaries of key takeaways.
+References have hyperlinks for easy access, and summaries of key takeaways that guided the construction of the principles. Every reader is encouraged to read all reference material for more details.
 
 ## Aspects
 
@@ -197,7 +191,7 @@ Following the principles outlined for each concept can help transfer the desired
     * [Employ Existing](#reuse-existing)
     * [Minimal](#minimal)
 * [Behavior](#behavior)
-    * [Positive](#postive)
+    * [Positive](#positive)
     * [Concise](#concise)
 * [Structure](#structure)
     * [Form Follows Function](#form-follows-function)
@@ -533,3 +527,19 @@ Naming
 [Narayanan, Arvind, and Vitaly Shmatikov. "Robust de-anonymization of large sparse datasets." 2008 ieee symposium on security and privacy. IEEE, 2008.][Robust De-anonymization of Large Datasets]
 
 * It's possible that any exposed data can be correlated with the data sets and individual users revealed
+
+## Intent
+
+The intent of this paper is to build a mental model of the purpose and pieces of an API in the readers mind.
+
+Ideally the readers mind should come away shaped to think about API's as a way to share knowledge with others.
+
+Calling out each aspect of the API is meant to encourage the reader to think about each aspect independently but also in context of the other aspects.
+
+The principles are meant to guide thought by providing a place to start when designing an API. By no means are the principles exhaustive.
+
+The references section with its summaries of material are meant to encourage the reader to do their own exploration of the topic.
+
+Hope you enjoyed the paper! I hope to have a video up soon that explores the topic in a more dynamic way.
+
+`-wandyezj`
