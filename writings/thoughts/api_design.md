@@ -45,21 +45,21 @@ Each API aspect will describe itself, then explore its __Purpose__, and two rela
 The API Aspects and explored principals are:
 
 * [Model](#model)
-    * [Reuse existing](#reuse-existing)
+    * [Employ Existing](#employ-existing)
     * [Minimal](#minimal)
 * [Behavior](#behavior)
-    * [positive](#postive)
-    * [concise](#concise)
+    * [Positive](#postive)
+    * [Concise](#concise)
 * [Structure](#structure)
-    * [form follows function](#form-follows-function)
-    * [constrain use](#constrain-use)
+    * [Form Follows Function](#form-follows-function)
+    * [Constrain Use](#constrain-use)
 * [Documentation](#documentation)
-    * [explain concepts](#explain-concepts)
-    * [show intent](#show-intent)
+    * [Explain Concepts](#explain-concepts)
+    * [Show Intent](#show-intent)
 
 The paper concludes with a summary of the principals.
 
-The end of the paper is a [reference section](#reference) that summarizes references that sparked this one.
+The end of the paper is a [reference section](#reference) that summarizes references that helped spark this paper.
 
 ### References
 
@@ -79,7 +79,7 @@ The __Technical Model__ is how the API is implemented and imposes constraints on
 
 Some well known __Technical Models__ include:
 
-* [Instruction Set Architectures](#Instruction-Set-Architectures) such as x86, AMD64, and ARM
+* [Instruction Set Architectures](#Instruction-Set-Architectures) such as: x86, AMD64, and ARM.
 * [Relational Model](#Relational-Algebra-Model) that backs many modern databases.
 * [Hypertext Transfer Protocol](#Hypertext-Transfer-Protocol)
 * Language Models: C, C++, JavaScript, TypeScript, Block programming etc...
@@ -99,9 +99,9 @@ Together the __Technical Model__ and __Mental Model__ provide the platform on wh
 
 #### Model Principals
 
-##### Reuse Existing
+##### Employ Existing
 
-Employing an already known __Mental Model__ and __Technical Model__  significantly reduces the amount of learning required to be able to use the API. When using an existing model it's best to follow the model as closely as possible since any deviation can surprise users and lead to mistakes in code.
+Employing a known __Mental Model__ and __Technical Model__  significantly reduces the amount of learning required to be able to use the API. When using an existing model it's best to follow the model as closely as possible since any deviation can surprise users and lead to mistakes in code.
 
 ##### Minimal
 
@@ -189,35 +189,38 @@ Documentation can show intent by providing examples for the audience to follow.
 
 ## Conclusion
 
-The four aspects explored: Model, Behavior, Structure, and Documentation all have a role to play in making an API accessible.
+The four aspects explored: Model, Behavior, Structure, and Documentation can all contribute towards making an API accessible.
 
-The core task of making an API accessible is to project the model of the API to the Audience.
+The core task of making an API accessible is to project the model of the API to the audience.
 
 Following the principals outlined for each concept can help project the desired model and make new APIs more accessible.
 
 * [Model](#model)
-    * [Reuse existing](#reuse-existing)
+    * [Employ Existing](#reuse-existing)
     * [Minimal](#minimal)
 * [Behavior](#behavior)
-    * [positive](#postive)
-    * [concise](#concise)
+    * [Positive](#postive)
+    * [Concise](#concise)
 * [Structure](#structure)
-    * [form follows function](#form-follows-function)
-    * [constrain use](#constrain-use)
+    * [Form Follows Function](#form-follows-function)
+    * [Constrain Use](#constrain-use)
 * [Documentation](#documentation)
-    * [explain concepts](#explain-concepts)
-    * [show intent](#show-intent)
+    * [Explain Concepts](#explain-concepts)
+    * [Show Intent](#show-intent)
 
 
 ## Reference
 
 ### McKeachie's Teaching Tips
+
 [McKeachie's Teaching Tips: Strategies, Research, and Theory for College and University Teachers]: https://www.amazon.com/McKeachies-Teaching-Tips-Wilbert-McKeachie/dp/1133936792
+
 [McKeachie's Teaching Tips: Strategies, Research, and Theory for College and University Teachers][McKeachie's Teaching Tips: Strategies, Research, and Theory for College and University Teachers]
 
 ### API Wikipedia
 
 [API Wikipedia]: https://en.wikipedia.org/wiki/Application_programming_interface
+
 [Wikipedia: API][API Wikipedia]
 
 ```text
@@ -225,7 +228,9 @@ an application programming interface (API) is a set of subroutine definitions, c
 ```
 
 ### API Design and Why it matters
+
 [API Design and Why it matters]: https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/32713.pdf "API Design and Why it matters"
+
 [API Design and Why it matters][API Design and Why it matters]
 
 * Successful Public APIs capture customers
@@ -234,7 +239,9 @@ an application programming interface (API) is a set of subroutine definitions, c
 * Thinking in terms of APIs improves code quality
 
 ### API Design Matters
+
 [API Design Matters]: https://queue.acm.org/detail.cfm?id=1255422 "API Design Matters"
+
 [API Design Matters][API Design Matters]
 
 Why:
@@ -252,18 +259,15 @@ Why:
 ### The Little Manual of API Design
 
 [The Little Manual of API Design]: http://people.mpi-inf.mpg.de/~jblanche/api-design.pdf "The Little Manual of API Design"
+
 [Blanchette, Jasmin. "The little manual of API design." Trolltech, Nokia (2008).][The Little Manual of API Design]
 
 * consistent naming conventions and patterns
 * predictability - lack of surprise
 * avoid boilerplate
-
 * leads to readable code
-
 * hard to misuse
 * eliminate redundancy in users code
-
-
 * Naming
     * recycle names from the existing models if applicable
     * Don't be creative
@@ -276,9 +280,7 @@ Why:
     * choose reasonable defaults
     * have parameters do one simple thing and be used one way
     * Avoid too many options
-
 * edge cases matter
-
 
 > If you hear a colleague in the hallway say “It doesn’t matter, it’s just a corner case”, please slap them in the face.
 
@@ -286,6 +288,7 @@ Why:
 ### The World and The Machine
 
 [The World and The Machine]: https://courses.cs.washington.edu/courses/csep503/19wi/schedule/papers/TheWorldAndTheMachine.pdf "The World and The Machine"
+
 [Jackson, Michael. "The world and the machine." 1995 17th International Conference on Software Engineering. IEEE, 1995.][The World and The Machine]
 
 > Software development is engineering because it is concerned to make useful physical devices to serve practical purposes in the world.
@@ -293,14 +296,18 @@ Why:
 > The requirement — that is, the problem — is in the world; the machine is the solution we construct
 
 ### Measuring API Usability
+
 [Measuring API Usability]: http://www.drdobbs.com/windows/measuring-api-usability/184405654 "Measuring API Usability"
+
 [Measuring API Usability][Measuring API Usability]
 
 * Scenario based approach
 * Evaluate actual users attempting to accomplish tasks
 
 ### What makes APIs Hard to learn
+
 [What makes APIs Hard to learn? Answers from Developers]: https://www.cs.mcgill.ca/~martin/papers/software2009a.pdf "What makes APIs Hard to learn? Answers from Developers"
+
 [Robillard, Martin P. "What makes APIs hard to learn? Answers from developers." IEEE software 26.6 (2009): 27-34.][What makes APIs Hard to learn? Answers from Developers]
 
 * APIs Structure
@@ -326,6 +333,7 @@ Why:
 ### An Empirical Study of API Usability
 
 [An Empirical Study of API Usability]: https://bugcounting.net/pubs/esem13.pdf "An Empirical Study of API Usability"
+
 [Piccioni, Marco, Carlo A. Furia, and Bertrand Meyer. "An empirical study of API usability." 2013 ACM/IEEE International Symposium on Empirical Software Engineering and Measurement. IEEE, 2013.][An Empirical Study of API Usability]
 
 > usable  APIs are  more  intuitive,  require  less  documentation  browsing,  and encourage reuse, thus increasing developers’ productivity
@@ -350,11 +358,15 @@ usability tokens - tokens are negatives in the API design
 * unexpected - API used in way not designed for
 
 ### Intelligent Code Completion
+
 [Intelligent Code Completion]: https://en.wikipedia.org/wiki/Intelligent_code_completion
+
 [Wikipedia: Intelligent Code Completion][Intelligent Code Completion]
 
 ### The Design of Everyday Things by Don Norman
+
 [The Design of Everyday Things by Don Norman]: http://www.nixdell.com/classes/HCI-and-Design-Spring-2017/The-Design-of-Everyday-Things-Revised-and-Expanded-Edition.pdf "The Design of Everyday Things by Don Norman"
+
 [Norman, Don. The design of everyday things: Revised and expanded edition. Basic books, 2013.][The Design of Everyday Things by Don Norman]
 
 * The idea of a mental model distinct from the underlying technical
@@ -365,6 +377,7 @@ usability tokens - tokens are negatives in the API design
 ### Instruction Set Architectures
 
 [Instruction Set Architectures]: https://en.wikipedia.org/wiki/Instruction_set_architecture "Instruction Set Architectures"
+
 [Wikipedia: Instruction Set Architectures][Instruction Set Architectures]
 
 * communicate with the CPU
@@ -372,23 +385,30 @@ usability tokens - tokens are negatives in the API design
 * many features
 
 ### Hypertext Transfer Protocol
+
 [Hypertext Transfer Protocol]: https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol "Hypertext Transfer Protocol"
+
 [Wikipedia: Hypertext Transfer Protocol][Hypertext Transfer Protocol]
 
 * Request Response protocol
 * Contains status information about the request in the response 
 
 ### Relational Model
+
 [A Relation Model of Data form Large Shared Data Banks]: https://www.seas.upenn.edu/~zives/03f/cis550/codd.pdf "A Relation Model of Data form Large Shared Data Banks - E. F. Codd"
+
 [Codd, Edgar F. "A relational model of data for large shared data banks." Communications of the ACM 13.6 (1970): 377-387.][A Relation Model of Data form Large Shared Data Banks]
 
 * Presents a Model of Relational Algebra for use in querying a database.
 
 ### As We May Think
+
 [Wikipedia As We May Think]: https://en.wikipedia.org/wiki/As_We_May_Think
-[Wikipedia: As We May Think]:[Wikipedia As We May Think]
+
+[Wikipedia: As We May Think][Wikipedia As We May Think]
 
 [As We May Think]: https://www.theatlantic.com/magazine/archive/1945/07/as-we-may-think/303881/
+
 [Bush, Vannevar, and As We May Think. "The atlantic monthly." As we may think 176.1 (1945): 101-108.][As We May Think]
 
 * Knowledge is becoming increasing specialized and detailed, how can this knowledge be shared?
@@ -397,12 +417,12 @@ usability tokens - tokens are negatives in the API design
 * The API can be thought of as an access to functionality
 
 ### An Introduction to Software Architecture
+
 [An Introduction to Software Architecture]: https://courses.cs.washington.edu/courses/csep503/19wi/schedule/papers/IntroSA.pdf "An Introduction to Software Architecture"
+
 [Garlan, David, and Mary Shaw. "An introduction to software architecture." Advances in software engineering and knowledge engineering. 1993. 1-39.][An Introduction to Software Architecture]
 
-
 > it is important to be able to recognize common paradigms so that high-level relationships among systems can be understood
-
 
 * Common patterns aid understanding
 * Understanding high level relationships is important to understand the system as a whole.
@@ -426,7 +446,9 @@ Architectural Styles
 * Heterogenous
 
 ### C++ Core Guidelines
+
 [C++ Core Guidelines]: http://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines "C++ Core Guidelines"
+
 [C++ Core Guidelines][C++ Core Guidelines]
 
 * Conventions to follow for C++ code
@@ -445,6 +467,7 @@ Philosophy
 ### JavaScript Style Guide and Coding Conventions
 
 [JavaScript Style Guide and Coding Conventions]: https://www.w3schools.com/js/js_conventions.asp "JavaScript Style Guide and Coding Conventions"
+
 [JavaScript Style Guide and Coding Conventions][JavaScript Style Guide and Coding Conventions]
 
 Why?
@@ -465,11 +488,13 @@ Suggestions:
 ### Software Testing: A Research Travelogue (2000–2014)
 
 [Software Testing: A Research Travelogue (2000–2014)]: https://courses.cs.washington.edu/courses/csep503/19wi/schedule/papers/SoftwareTestingTravelogue.pdf "Software Testing: A Research Travelogue (2000–2014)"
+
 [Orso, Alessandro, and Gregg Rothermel. "Software testing: a research travelogue (2000–2014)." Proceedings of the on Future of Software Engineering. ACM, 2014.][Software Testing: A Research Travelogue (2000–2014)]
 
 ### An Overview of Formal Methods Tools and Techniques
 
 [An Overview of Formal Methods Tools and Techniques]: https://courses.cs.washington.edu/courses/csep503/19wi/schedule/papers/AnOverviewOfFormalMethodsToolsAndTechniques.pdf "An Overview of Formal Methods Tools and Techniques"
+
 [An Overview of Formal Methods Tools and Techniques][An Overview of Formal Methods Tools and Techniques]
 
 * Formal methods at the moment are too costly to implement in most software development practices.
@@ -478,12 +503,14 @@ Suggestions:
 ### API Design Reviews at Scale
 
 [API Design Reviews at Scale]: https://storage.googleapis.com/pub-tools-public-publication-data/pdf/45294.pdf "API Design Reviews at Scale"
+
 [Macvean, Andrew, Martin Maly, and John Daughtry. "API design reviews at scale." Proceedings of the 2016 CHI Conference Extended Abstracts on Human Factors in Computing Systems. ACM, 2016.][API Design Reviews at Scale]
 
 
 ### How to write a technical paper
 
 [How to write a technical paper]: https://homes.cs.washington.edu/~mernst/advice/write-technical-paper.html "How to write a technical paper"
+
 [How to write a technical paper][How to write a technical paper]
 
 > know your message, and stay on message
@@ -503,7 +530,9 @@ Naming
 > When readers misunderstand the paper, that is always at least partly the author's fault!
 
 ### Robust De-anonymization of Large Datasets
+
 [Robust De-anonymization of Large Datasets]:https://courses.cs.washington.edu/courses/csep503/19wi/schedule/papers/deanonymization.pdf "Robust De-anonymization of Large Datasets"
+
 [Narayanan, Arvind, and Vitaly Shmatikov. "Robust de-anonymization of large sparse datasets." 2008 ieee symposium on security and privacy. IEEE, 2008.][Robust De-anonymization of Large Datasets]
 
 * It's possible that any exposed data can be correlated with the data sets and individual users revealed
