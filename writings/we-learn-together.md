@@ -49,3 +49,12 @@ Thus people always
 
 
 People have learned different things 
+
+
+
+
+## Stuck in a paradigm of lecture
+
+why? Stuck in paradignm of desks all facing towards the front instead of at each other
+
+What does a digital classroom look like?
