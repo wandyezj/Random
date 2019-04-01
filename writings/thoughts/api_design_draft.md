@@ -120,6 +120,23 @@ The purpose of an APIs behavior is to accomplish its assigned task and provide f
 * Special cases add complexity and can be harder to explain.
 * Understanding the current state of the model is generally helpful.
 
+
+
+* Positive description
+* succinctly explainable
+* 
+
+Prefer the positive description. 
+
+
+
+Error handling is part of an APIs behavior. Make sure to describe what happens in an error case.
+
+Have one model for error handling, avoid mixing patterns. Error cases are generally an afterthought when writing code. Having a single way of handling errors makes this easier on developers.
+
+Prefer allowing the behavior to understand the current state of the system after an action occurs when possible. This allows the API user to experiment with the system.
+
+
 #### Behavior Patterns
 
 * Simple behavior
@@ -148,6 +165,15 @@ The purpose of API structure is to provide the concrete blocks of interaction th
 * Having the same structure represent the same concept is easier to understand and remember.
 
 
+* Prefer strongly types structures
+* Prefer one method of error handling
+
+* 
+
+
+* Choose one method of error handling. Avoid mixing error handling structures: return codes, exceptions etc..
+* Strong Types
+* Avoid overloading operators with operations that are not mainstream on those object types.
 
 #### Structure Patterns
 
