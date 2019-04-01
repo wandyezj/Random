@@ -1,9 +1,5 @@
 # API Design Accessibility Principles
 
-name:
-
-email:
-
 [For the best reading experience read on GitHub](https://github.com/wandyezj/Random/blob/master/writings/thoughts/api_design.md)
 
 ## Abstract
