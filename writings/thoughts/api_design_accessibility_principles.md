@@ -121,7 +121,7 @@ The negative description of what an API should __not__ do is infinite. The posit
 
 Using the positive descriptions for an API's behavior is more descriptive than the negative description.
 
-Positive descriptions are easier to understand than a combination of positive and negative descriptions.
+Positive descriptions are generally easier to understand than a combination of positive and negative descriptions.
 
 ##### Concise
 
@@ -145,7 +145,7 @@ Making the elements of the API (i.e. names, types, functions, and parameters) de
 
 ##### Constrain Use
 
-The structure should constrain the use of the API to make correct usage of the API easy and wrong usage of the API hard. Similarly, the intended use of the API should look correct and unintended use should look incorrect.
+The structure should constrain the use of the API to make correct usage of the API easy, and wrong usage of the API hard. Similarly, the intended use of the API should look correct, and unintended use should look incorrect.
 
 See [The Little Manual of API Design](#the-little-manual-of-api-design) Principle of "hard to misuse".
 
@@ -170,7 +170,7 @@ The purpose of documentation is to explain how to effectively interact with the 
 
 ##### Explain Concepts
 
-Documentation can be used to explain the concepts required to use the API. Understanding the high-level concepts of the API can help others use the API more effectively.
+Documentation should be used to explain the concepts required to use the API. Understanding the high-level concepts of the API helps others use the API more effectively.
 
 Understanding "overall architecture" was cited as key need for developers to do more than the basics in [What Makes APIs Hard to Learn](#what-makes-apis-hard-to-learn).
 
@@ -178,14 +178,11 @@ Understanding "overall architecture" was cited as key need for developers to do 
 
 Having documentation show intent, for example by providing examples of intended use, allows consumers of the API to model and constrain their usage to the intended uses.
 
-
-
-
 ## Conclusion
 
 Model, Behavior, Structure, and Documentation can all work together to facilitate API accessibility.
 
-Following the principles outlined for each concept can help transfer the desired model from the head of the author to that of the user and make an API more accessible.
+Following the principles outlined for each concept can help transfer the desired model from the mind of the author to that of the user, thus making an API more accessible.
 
 * [Model](#model)
     * [Employ Existing](#reuse-existing)
@@ -215,9 +212,7 @@ Following the principles outlined for each concept can help transfer the desired
 
 [Wikipedia: API][API Wikipedia]
 
-```text
-an application programming interface (API) is a set of subroutine definitions, communication protocols, and tools for building software. In general terms, it is a set of clearly defined methods of communication among various components. A good API makes it easier to develop a computer program by providing all the building blocks, which are then put together by the programmer.
-```
+> an application programming interface (API) is a set of subroutine definitions, communication protocols, and tools for building software. In general terms, it is a set of clearly defined methods of communication among various components. A good API makes it easier to develop a computer program by providing all the building blocks, which are then put together by the programmer.
 
 ### API Design and Why it matters
 
@@ -239,7 +234,7 @@ an application programming interface (API) is a set of subroutine definitions, c
 Why:
 
 * Poor APIs are difficult to program with and often require additional code to be written
-* poor APIs are harder to understand and more difficult to work with than good ones
+* Poor APIs are harder to understand and more difficult to work with than good ones
 * Poor APIs often require not only extra code, but also more complex code that provides more places where bugs can hide
 * Poor APIs Increase the cost to develop software
     * Time to Understand
@@ -482,6 +477,8 @@ Suggestions:
 
 [Orso, Alessandro, and Gregg Rothermel. "Software testing: a research travelogue (2000–2014)." Proceedings of the on Future of Software Engineering. ACM, 2014.][Software Testing: A Research Travelogue (2000–2014)]
 
+* It's much easier to test a system when it's behavior is well defined.
+
 ### An Overview of Formal Methods Tools and Techniques
 
 [An Overview of Formal Methods Tools and Techniques]: https://courses.cs.washington.edu/courses/csep503/19wi/schedule/papers/AnOverviewOfFormalMethodsToolsAndTechniques.pdf "An Overview of Formal Methods Tools and Techniques"
@@ -497,6 +494,14 @@ Suggestions:
 
 [Macvean, Andrew, Martin Maly, and John Daughtry. "API design reviews at scale." Proceedings of the 2016 CHI Conference Extended Abstracts on Human Factors in Computing Systems. ACM, 2016.][API Design Reviews at Scale]
 
+* Peer reviews are more efficient that usability tests, however usability tests are much more effective.
+* Consolidate knowledge of API design and patterns into the review team
+
+> Samples of end user source code is essential, as it allows reviewers to see in pracice how the API is used
+
+> key in any review process is consistency in advice and guidance
+
+* when one reviewer identifies a usability issue it is centrally documented so design teams can avoid the same pitfall and other reviewers can offer the same advice.
 
 ### How to write a technical paper
 
