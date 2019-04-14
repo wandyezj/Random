@@ -6,7 +6,11 @@ The was unsatisfied with this response as I believe there are more important goa
 
 I think that this conversation potentially points to a gap in communication between Admnistrators, Teachers and Students.
 
+Similarly there is potentially confusion in wider society about the purpose of a public education.
+
 What can be done to define specific high level educational principles and communicate them appropriately to each level?
+
+Educational principals should be thought of as high level Axioms from which all further educationa goals are derived. In turn these smaller goals drive specific actions to accomplish these goals.
 
 > Why should students go to school?
 
