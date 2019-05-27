@@ -122,4 +122,6 @@ a feeling of belonging in society
 a feeling of being valued by society
 
 inspired to contribute to society in some way
+
+prepare to be an active participant in society
 ```
