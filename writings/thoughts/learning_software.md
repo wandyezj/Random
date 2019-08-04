@@ -55,3 +55,10 @@
 
 * ubiquitous computing
     * weisers scientific america article
+
+## Are the following concepts that useful?
+
+* Modulo - remainder division is something that is often taught in introductory classes, but how often is it practically used? perhaps modulo should be relegated to a nice t have verses something critical.
+    * it is useful and a key concept, but it seems like it could be an advanced concept verses a key one for basic programming
+    * https://stackoverflow.com/questions/3589976/what-are-the-practical-uses-of-modulus-in-programming
+    * https://en.wikipedia.org/wiki/Modular_arithmetic#Applications)

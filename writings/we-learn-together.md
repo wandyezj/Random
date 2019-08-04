@@ -58,3 +58,14 @@ People have learned different things
 why? Stuck in paradignm of desks all facing towards the front instead of at each other
 
 What does a digital classroom look like?
+
+## Feeling of belonging
+
+How to help people feel like they belong?
+
+Cooperation not competition
+
+Teaching is not just about facts, it's about the whole person.
+
+need to build friendly relationships between students
+
